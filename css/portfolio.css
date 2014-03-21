@@ -205,9 +205,6 @@ ABOUT
 	margin: 0 auto;
 	padding: 12px;
 }
-#discription p:nth-child(0n+2) {
-	color: red;
-}
 
 #discription p a {
 	text-decoration: none;
