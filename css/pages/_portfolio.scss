@@ -1,0 +1,45 @@
+/***********************************************
+PAGE: PORTFOLIO
+***********************************************/
+
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    float: left;
+    width: 47%;
+    margin: 1.5%;
+    background-color: transparent;
+    color: #bdc3c7;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: 0 0 12px #737878;
+    
+    @media only screen and (min-width: 480px) {
+      width: 30.333333333333%;
+      &:nth-child(4n) {
+      clear: left;
+      }
+    }
+    @media only screen and (min-width: 440px) and (max-width: 456px) {
+      height: 236px;
+    }
+    
+    p {
+      margin: 0;
+      padding: 5%;
+      font-size: .75em;
+      text-align: center;
+      color: #737878;
+      @include link;
+    }
+  }
+  img {
+    width: 96%;
+    margin: 0px auto;
+    padding: 2%;
+    border-radius: 2px;
+    display: block;
+  }
+}
+
