@@ -22,10 +22,10 @@ Blog
   overflow: auto;
 }
 
-#blog-img {
+#blog-head {
   width: 98%;
   height: 200px;
-  margin: 9px auto;
+  margin: 4px auto;
   background: teal;
   padding: 12px;
 }
@@ -33,14 +33,34 @@ Blog
 .photo {
   display: inline-block;
   float: right;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  img {
+    width: 96%;
+    margin: 2% auto;
+    display: block;
+  }
+
 }
 
 .calendar {
   display: inline-block;
+  width: 30%;
   float: left;
-  padding: 12px;
   color: #737878;
   border-radius: 4px;
+  ul {
+    list-style: none;
+    float: left;
+    padding-left: 12px;
+    li {
+      line-height: 1.4em;
+      font-size: 1rem;
+    }
+  }
 }
 
 #blog-content {
