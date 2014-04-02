@@ -206,11 +206,12 @@ html {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.4em;
-  margin: auto;
   padding-top: 3.5px; }
-  @media only screen and (min-width: 960px) {
-    body {
-      width: 960px; } }
+
+@media only screen and (min-width: 960px) {
+  #wrap {
+    width: 960px;
+    margin: auto; } }
 
 #page {
   max-width: 960px;
@@ -335,10 +336,12 @@ footer {
 /***********************************************
 COLORS
 ***********************************************/
-body, .calendar, .photo {
+body {
   color: #737878;
-  background: url("../img/light_grey_@2X.jpg");
-  /*-webkit-linear-gradient(#dde6f3, #CEE8FF);*/ }
+  background: url("../img/light_grey_@2X.jpg"); }
+
+.calendar, .photo {
+  background: url("../img/cream_dust_@2X.png"); }
 
 /* logo text*/
 h1, h2 {
@@ -507,19 +510,25 @@ Blog
 
 #blog-post {
   margin: 12px auto;
-  background-color: transparent;
+  background: transparent;
   border-radius: 3px 3px 0px 0px;
   box-shadow: 0 0 12px #737878;
   min-width: 300px;
-  max-height: 600px;
+  max-height: 450px;
   overflow: auto; }
+  #blog-post:nth-child(1n) #blog-head {
+    background: rgba(11, 177, 186, 0.75); }
+  #blog-post:nth-child(2n) #blog-head {
+    background: rgba(194, 139, 90, 0.75); }
+  #blog-post:nth-child(3n) #blog-head {
+    background: rgba(123, 134, 140, 0.75); }
 
 #blog-head {
   width: 98%;
-  height: 200px;
+  height: 160px;
   margin: 4px auto;
-  background: teal;
-  padding: 12px; }
+  padding: 12px;
+  position: relative; }
 
 .photo {
   display: inline-block;
@@ -527,8 +536,7 @@ Blog
   width: 100px;
   height: 100px;
   margin: 0;
-  padding: 0;
-  border-radius: 4px; }
+  padding: 0; }
   .photo img {
     width: 96%;
     margin: 2% auto;
@@ -538,8 +546,7 @@ Blog
   display: inline-block;
   width: 30%;
   float: left;
-  color: #737878;
-  border-radius: 4px; }
+  color: #737878; }
   .calendar ul {
     list-style: none;
     float: left;

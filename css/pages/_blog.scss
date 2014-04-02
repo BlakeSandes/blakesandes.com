@@ -14,20 +14,35 @@ Blog
 
 #blog-post {
   margin: 12px auto;
-  background-color: transparent;
+  background: transparent;
   border-radius: 3px 3px 0px 0px;
   box-shadow: 0 0 12px #737878;
   min-width: 300px;
-  max-height: 600px;
+  max-height: 450px;
   overflow: auto;
+  &:nth-child(1n) {
+    #blog-head {
+      background: rgba(11,177,186, .75);
+    }
+  }
+  &:nth-child(2n) {
+    #blog-head {
+      background: rgba(194,139,90, .75);
+    }
+  }
+  &:nth-child(3n) {
+    #blog-head {
+      background: rgba(123,134,140, .75);
+    }
+  }
 }
 
 #blog-head {
   width: 98%;
-  height: 200px;
+  height: 160px;
   margin: 4px auto;
-  background: teal;
   padding: 12px;
+  position: relative;
 }
 
 .photo {
@@ -37,7 +52,6 @@ Blog
   height: 100px;
   margin: 0;
   padding: 0;
-  border-radius: 4px;
   img {
     width: 96%;
     margin: 2% auto;
@@ -51,7 +65,6 @@ Blog
   width: 30%;
   float: left;
   color: #737878;
-  border-radius: 4px;
   ul {
     list-style: none;
     float: left;
