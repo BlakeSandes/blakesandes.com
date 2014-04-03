@@ -3,16 +3,30 @@
 Blog
 ***********************************************/
 
+/*Flexbox parameters and media queries included*/
+
 #blog-page {
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+
+  @media only screen and (max-width: 660px) {
+  -webkit-flex-direction: column;
+  }
+  
+  @media only screen and (min-width: 661px) {
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  }
+  
   max-width: 960px;
   margin: 0 0px 24px;
   padding: 2%;
   border-radius: 4px;
-  display: inline-block;
   box-shadow: inset 0 0 3.5px 1px #737878;
 }
 
 #blog-post {
+  -webkit-flex-wrap: wrap;
   margin: 12px auto;
   background: transparent;
   border-radius: 3px 3px 0px 0px;
@@ -20,17 +34,29 @@ Blog
   min-width: 300px;
   max-height: 450px;
   overflow: auto;
-  &:nth-child(1n) {
+  
+  @media only screen and (min-width: 661px) {
+    &:nth-child(even),
+    &:nth-child(odd) {
+      width: 48%;
+    }
+  }
+  &:nth-child(4n+1) {
     #blog-head {
       background: rgba(11,177,186, .75);
     }
   }
-  &:nth-child(2n) {
+  &:nth-child(4n+2) {
     #blog-head {
       background: rgba(194,139,90, .75);
     }
   }
-  &:nth-child(3n) {
+  &:nth-child(4n+3) {
+    #blog-head {
+      background: rgba(115,65,185, .75);
+    }
+  }
+  &:nth-child(4n) {
     #blog-head {
       background: rgba(123,134,140, .75);
     }

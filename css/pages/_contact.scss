@@ -4,29 +4,29 @@ CONTACT
 
 .contact-info {
   list-style: none;
+  display: block;
+  margin: 0px auto;
+  font-size: .95em;
   padding: 0;
-  margin: 0;
-  font-size: 0.9em;
-  a {
-    display: block;
-    min-height: 20px;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    padding: 0 0 0 30px;
-    margin: 0 0 10px;
-  }
+  
+  
   li {
-    &.phone a {
-      background-image: url('../img/phone.png');
-    }
-    &.mail a {
-      background-image: url('../img/mail.png');
-    }
-    &.twitter a {
-      background-image: url('../img/twitter.png');
+    a {
+      display: block;
+      padding: 0 10px 0 10px;
+      margin: 0 0 12px;
+      text-align: center;
+      color: #739FF3;
     }
   }
 }
+
+.phone, .mail, .twitter {
+        height: 1.3em;
+        position: relative;
+        top: 3px;
+        right: 2px;
+      }
 
 @media only screen and (min-width: 480px) {
   #primary {
@@ -35,19 +35,21 @@ CONTACT
   }
 
   #secondary {
-    width: 40%;
+    width: 50%;
     float: right;
-    padding-top: 48px;
   }
 }
 
 
-#primary h3, #secondary {
-  margin: 24px 0px;
+#primary, h3 {
+  margin: 24px auto;
+}
+#secondary {
+  margin: 96px auto;
 }
 
 #primary, #secondary {
-  padding-bottom: 48px;
+  padding:0px 12px;
 }
 
 #gen_info {
