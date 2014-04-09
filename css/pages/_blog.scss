@@ -7,15 +7,21 @@ Blog
 
 #blog-page {
   display: -webkit-flex;
+  display: -moz-flex;
   -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+
 
   @media only screen and (max-width: 660px) {
   -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   }
   
   @media only screen and (min-width: 661px) {
   -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
   -webkit-flex-direction: row;
+  -moz-flex-direction: row;
   }
   
   max-width: 960px;
@@ -27,6 +33,7 @@ Blog
 
 #blog-post {
   -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
   margin: 12px auto;
   background: transparent;
   border-radius: 3px 3px 0px 0px;
@@ -102,9 +109,3 @@ Blog
   }
 }
 
-#blog-content {
-  padding: 24px;
-  p {
-    text-indent: 12px;
-  }
-}
