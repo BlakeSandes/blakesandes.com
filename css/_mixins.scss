@@ -1,0 +1,18 @@
+@mixin link {
+  a {
+    text-decoration: none;
+    color: #575C61;
+    &:hover {
+      border-top: 2px solid darkgrey;
+      border-bottom: 2px solid darkgrey;
+    }
+  }
+}
+
+//media query for paragraph on about page
+
+@mixin about_left {
+	clear: none;
+	float: left;
+	width: 48%;
+}
