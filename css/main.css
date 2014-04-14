@@ -326,12 +326,16 @@ footer {
   padding-top: 50px;
   padding-bottom: 24px;
   color: #737878;
-  clear: both; }
+  clear: both;
+  position: relative; }
 
 .social-icon {
   width: 20px;
   height: 20px;
   margin: 0 5px; }
+
+.meter {
+  margin-left: 3px; }
 
 /***********************************************
 COLORS
