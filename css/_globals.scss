@@ -50,7 +50,7 @@ h3 {
 
 p {
   text-indent: 12px;
-  &:first-letter {
+  &::first-letter {
     font-size: 1.1em;
   }
 }

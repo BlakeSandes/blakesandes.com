@@ -24,3 +24,14 @@ $overlay.click(function(){
   //Hide overlay.
   $overlay.hide();
 });
+
+
+//JQuery for Blog.
+
+$('#blog-head').click(function() {
+  $(this).next('#blog-post').slideToggle('slow');
+});
+
+$('#blog-base').click(function() {
+  $(this).prev().slideUp('slow');
+});

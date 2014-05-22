@@ -4,17 +4,13 @@ Blog
 ***********************************************/
 
 
-  
-  
-
-
 #blog-page {
   background: transparent;
   border-radius: 3px 3px 0px 0px;
   box-shadow: 0 0 12px #737878;
   min-width: 300px;
-  margin-top: 6px;
-  padding-top: 4px;
+  margin-top: 3px;
+  border-radius: 0px 0px 4px 4px;
 
   
   
@@ -29,30 +25,30 @@ Blog
     }
   }
   &:nth-child(4n+1) {
-    #blog-head {
-      background: rgba(11,177,186, .75);
+    #blog-head, #blog-base {
+      background: rgba(11,177,186, .60);
     }
   }
   &:nth-child(4n+2) {
-    #blog-head {
-      background: rgba(194,139,90, .75);
+    #blog-head, #blog-base {
+      background: rgba(194,139,90, .60);
     }
   }
   &:nth-child(4n+3) {
-    #blog-head {
-      background: rgba(115,65,185, .75);
+    #blog-head, #blog-base {
+      background: rgba(115,65,185, .60);
     }
   }
   &:nth-child(4n) {
-    #blog-head {
-      background: rgba(123,134,140, .75);
+    #blog-head, #blog-base {
+      background: rgba(123,134,140, .60);
     }
   }
 }
 
 #blog-head {
-  width: 98%;
-  height: 160px;
+  width: 100%;
+  height: 120px;
   padding: 12px;
   margin: 0px auto;
 }
@@ -87,11 +83,22 @@ Blog
     }
   }
 }
+.tab {
+  
+}
 
 #blog-post {
   overflow: auto;
   height: 300px;
   padding: 6px;
+}
+
+#blog-base {
+  width: 100%;
+  height: 12px;
+  padding: 12px;
+  margin: 0px auto;
+  border-radius: 0px 0px 4px 4px;
 }
 
 
