@@ -306,14 +306,14 @@ body {
 
 @media only screen and (min-width: 960px) {
   /* line 23, ../components/sass/_globals.scss */
-  #wrap {
+  .wrap {
     width: 960px;
     margin: auto;
   }
 }
 
 /* line 30, ../components/sass/_globals.scss */
-#page {
+.page {
   max-width: 960px;
   margin: 0px 0px 24px;
   padding: 1%;
@@ -367,46 +367,41 @@ footer {
   margin: 0 5px;
 }
 
-/* line 82, ../components/sass/_globals.scss */
-.meter {
-  margin-left: 3px;
-}
-
 /***********************************************
 COLORS
 ***********************************************/
-/* line 91, ../components/sass/_globals.scss */
+/* line 89, ../components/sass/_globals.scss */
 body {
   color: #737878;
   background: url("../img/light_grey_@2X.jpg");
 }
 
-/* line 96, ../components/sass/_globals.scss */
+/* line 94, ../components/sass/_globals.scss */
 .calendar, .photo {
   background: url("../img/cream_dust_@2X.png");
 }
 
 /* logo text*/
-/* line 102, ../components/sass/_globals.scss */
+/* line 100, ../components/sass/_globals.scss */
 h1, h2 {
   color: #DDEBF3;
 }
 
-/* line 106, ../components/sass/_globals.scss */
+/* line 104, ../components/sass/_globals.scss */
 a {
   color: #739FF3;
 }
 
 /* selected nav link */
-/* line 112, ../components/sass/_globals.scss */
+/* line 110, ../components/sass/_globals.scss */
 nav a {
   color: #DDEBF3;
 }
-/* line 114, ../components/sass/_globals.scss */
+/* line 112, ../components/sass/_globals.scss */
 nav a:visited {
   color: #DDEBF3;
 }
-/* line 117, ../components/sass/_globals.scss */
+/* line 115, ../components/sass/_globals.scss */
 nav a.selected, nav a:hover {
   color: #92999E;
 }
@@ -415,7 +410,7 @@ nav a.selected, nav a:hover {
 HEADER
 ***********************************************/
 /* line 5, ../components/sass/_nav.scss */
-#heading {
+.heading {
   max-width: 960px;
   float: left;
   padding: 5px 0px 0px;
@@ -427,7 +422,7 @@ HEADER
 }
 @media screen and (min-width: 660px) {
   /* line 5, ../components/sass/_nav.scss */
-  #heading {
+  .heading {
     border-bottom: 1px solid #6F9AFF;
     margin: 0 0 4px;
     box-shadow: inset 0 0 3.5px #737878;
@@ -436,13 +431,13 @@ HEADER
 }
 
 /* line 22, ../components/sass/_nav.scss */
-#logo {
+.logo {
   text-align: center;
   margin: 0;
 }
 @media screen and (min-width: 660px) {
   /* line 22, ../components/sass/_nav.scss */
-  #logo {
+  .logo {
     float: left;
     margin-left: 5%;
     text-align: left;
@@ -531,13 +526,13 @@ nav a {
 PAGE: PORTFOLIO
 ***********************************************/
 /* line 5, ../components/sass/_portfolio.scss */
-#gallery {
+.gallery {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 /* line 9, ../components/sass/_portfolio.scss */
-#gallery li {
+.gallery li {
   float: left;
   width: 47%;
   margin: 1.5%;
@@ -548,22 +543,22 @@ PAGE: PORTFOLIO
 }
 @media only screen and (min-width: 481px) {
   /* line 9, ../components/sass/_portfolio.scss */
-  #gallery li {
+  .gallery li {
     width: 30.333333333333%;
   }
   /* line 20, ../components/sass/_portfolio.scss */
-  #gallery li:nth-child(4n) {
+  .gallery li:nth-child(4n) {
     clear: left;
   }
 }
 @media only screen and (min-width: 440px) and (max-width: 456px) {
   /* line 9, ../components/sass/_portfolio.scss */
-  #gallery li {
+  .gallery li {
     height: 236px;
   }
 }
 /* line 28, ../components/sass/_portfolio.scss */
-#gallery li p {
+.gallery li p {
   margin: 0;
   padding: 5%;
   font-size: .75em;
@@ -571,17 +566,17 @@ PAGE: PORTFOLIO
   color: #737878;
 }
 /* line 2, ../components/sass/_mixins.scss */
-#gallery li p a {
+.gallery li p a {
   text-decoration: none;
   color: #575C61;
 }
 /* line 5, ../components/sass/_mixins.scss */
-#gallery li p a:hover {
+.gallery li p a:hover {
   border-top: 2px solid darkgrey;
   border-bottom: 2px solid darkgrey;
 }
 /* line 37, ../components/sass/_portfolio.scss */
-#gallery img {
+.gallery img {
   width: 98.5%;
   margin: 0px auto;
   padding: 2%;
@@ -590,7 +585,7 @@ PAGE: PORTFOLIO
 }
 
 /* line 46, ../components/sass/_portfolio.scss */
-#overlay {
+.overlay {
   background: rgba(76, 104, 143, 0.5);
   width: 100%;
   height: 135%;
@@ -601,8 +596,8 @@ PAGE: PORTFOLIO
   text-align: center;
 }
 /* line 55, ../components/sass/_portfolio.scss */
-#overlay img {
-  margin-top: 20%;
+.overlay img {
+  margin-top: 30%;
   width: 60%;
 }
 
@@ -636,43 +631,43 @@ ABOUT
 }
 
 /* line 26, ../components/sass/_about.scss */
-#discription h3 {
+.discription h3 {
   margin: 24px 0px;
 }
 
 /* line 30, ../components/sass/_about.scss */
-#about_text {
+.about_text {
   box-shadow: inset 0 0 3.5px 1px #737878;
   margin-left: 16px;
   padding: 4px;
 }
 
 /* line 36, ../components/sass/_about.scss */
-#discription p {
+.discription p {
   clear: both;
   max-width: 96%;
   margin: 0 auto;
   padding: 12px;
 }
 /* line 2, ../components/sass/_mixins.scss */
-#discription p a {
+.discription p a {
   text-decoration: none;
   color: #575C61;
 }
 /* line 5, ../components/sass/_mixins.scss */
-#discription p a:hover {
+.discription p a:hover {
   border-top: 2px solid darkgrey;
   border-bottom: 2px solid darkgrey;
 }
 @media screen and (min-width: 660px) {
   /* line 36, ../components/sass/_about.scss */
-  #discription p {
+  .discription p {
     clear: none;
     float: left;
     width: 48%;
   }
   /* line 44, ../components/sass/_about.scss */
-  #discription p:nth-child(4) {
+  .discription p:nth-child(4) {
     clear: none;
     float: left;
     width: 48%;
@@ -681,7 +676,7 @@ ABOUT
 }
 @media only screen and (min-width: 660px) and (max-width: 844px) {
   /* line 50, ../components/sass/_about.scss */
-  #discription p:last-child {
+  .discription p:last-child {
     float: right;
     width: 48%;
   }
@@ -729,22 +724,22 @@ CONTACT
   }
 }
 /* line 44, ../components/sass/_contact.scss */
-#primary, h3 {
+.primary, h3 {
   margin: 24px auto;
 }
 
 /* line 47, ../components/sass/_contact.scss */
-#secondary {
+.secondary {
   margin: 96px auto;
 }
 
 /* line 51, ../components/sass/_contact.scss */
-#primary, #secondary {
+.primary, #secondary {
   padding: 0px 12px;
 }
 
 /* line 55, ../components/sass/_contact.scss */
-#gen_info {
+.gen_info {
   box-shadow: inset 0 0 3.5px 1px #737878;
   padding: 4px;
   margin-left: 16px;
@@ -754,7 +749,7 @@ CONTACT
 Blog
 ***********************************************/
 /* line 7, ../components/sass/_blog.scss */
-#blog-page {
+.blog-page {
   background: transparent;
   border-radius: 3px 3px 0px 0px;
   box-shadow: 0 0 12px #737878;
@@ -764,31 +759,31 @@ Blog
 }
 @media only screen and (min-width: 661px) {
   /* line 19, ../components/sass/_blog.scss */
-  #blog-page:nth-child(even), #blog-page:nth-child(odd) {
+  .blog-page:nth-child(even), .blog-page:nth-child(odd) {
     width: 48%;
     margin: 1%;
     float: left;
   }
 }
 /* line 28, ../components/sass/_blog.scss */
-#blog-page:nth-child(4n+1) #blog-head, #blog-page:nth-child(4n+1) #blog-base {
+.blog-page:nth-child(4n+1) #blog-head, .blog-page:nth-child(4n+1) #blog-base {
   background: rgba(11, 177, 186, 0.6);
 }
 /* line 33, ../components/sass/_blog.scss */
-#blog-page:nth-child(4n+2) #blog-head, #blog-page:nth-child(4n+2) #blog-base {
+.blog-page:nth-child(4n+2) #blog-head, .blog-page:nth-child(4n+2) #blog-base {
   background: rgba(194, 139, 90, 0.6);
 }
 /* line 38, ../components/sass/_blog.scss */
-#blog-page:nth-child(4n+3) #blog-head, #blog-page:nth-child(4n+3) #blog-base {
+.blog-page:nth-child(4n+3) #blog-head, .blog-page:nth-child(4n+3) #blog-base {
   background: rgba(115, 65, 185, 0.6);
 }
 /* line 43, ../components/sass/_blog.scss */
-#blog-page:nth-child(4n) #blog-head, #blog-page:nth-child(4n) #blog-base {
+.blog-page:nth-child(4n) #blog-head, .blog-page:nth-child(4n) #blog-base {
   background: rgba(123, 134, 140, 0.6);
 }
 
 /* line 49, ../components/sass/_blog.scss */
-#blog-head {
+.blog-head {
   width: 100%;
   height: 120px;
   padding: 12px;
@@ -831,14 +826,14 @@ Blog
 }
 
 /* line 90, ../components/sass/_blog.scss */
-#blog-post {
+.blog-post {
   overflow: auto;
   height: 300px;
   padding: 6px;
 }
 
 /* line 96, ../components/sass/_blog.scss */
-#blog-base {
+.blog-base {
   width: 100%;
   height: 12px;
   padding: 12px;

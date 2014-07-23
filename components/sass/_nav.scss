@@ -2,7 +2,7 @@
 HEADER
 ***********************************************/
 
-#heading {
+.heading {
   max-width: 960px;
   float: left;
   padding: 5px 0px 0px;
@@ -19,7 +19,7 @@ HEADER
   }
 }
 
-#logo {
+.logo {
   text-align: center;
   margin: 0;
   @media screen and (min-width: 660px) {

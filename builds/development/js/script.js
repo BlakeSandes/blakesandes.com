@@ -6,7 +6,7 @@ $ = require('jquery');
 
 //////Create an overlay with a large image for the gallery.//////
 
-var $overlay = $('<div id="overlay"></div>');
+var $overlay = $('<div class="overlay"></div>');
 var $image = $("<img>");
 var $caption = $("<p></p>");
 //Add image to overlay.
@@ -17,11 +17,11 @@ $overlay.append($caption);
 $("body").append($overlay);
 
 //Capture the click event on a link to an image.
-$("#gallery a").click(function(event) {
+$(".gallery a").click(function(event) {
   event.preventDefault();
   var imageLocation = $(this).attr("href");
   $image.attr("src", imageLocation);
-  $overlay.show();
+  $overlay.fadeIn();
 })
 
 //When overlay is clicked.
