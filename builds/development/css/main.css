@@ -282,6 +282,30 @@ table {
   border-spacing: 0;
 }
 
+/* line 2, ../components/sass/_mixins.scss */
+.gallery li p a, .discription p a {
+  text-decoration: none;
+  color: #575C61;
+}
+/* line 5, ../components/sass/_mixins.scss */
+.gallery li p a:hover, .discription p a:hover {
+  border-top: 2px solid darkgrey;
+  border-bottom: 2px solid darkgrey;
+}
+
+/* line 12, ../components/sass/_mixins.scss */
+nav a {
+  color: #DDEBF3;
+}
+/* line 14, ../components/sass/_mixins.scss */
+nav a:visited {
+  color: #DDEBF3;
+}
+/* line 17, ../components/sass/_mixins.scss */
+nav a.selected, nav a:hover {
+  color: #92999E;
+}
+
 /***********************************************
 GENERAL
 ***********************************************/
@@ -353,14 +377,13 @@ FOOTER
 footer {
   font-size: 0.75em;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 24px;
+  padding-bottom: 12px;
   color: #737878;
   clear: both;
   position: relative;
 }
 
-/* line 74, ../components/sass/_globals.scss */
+/* line 73, ../components/sass/_globals.scss */
 .social-icon {
   width: 20px;
   height: 20px;
@@ -370,38 +393,38 @@ footer {
 /***********************************************
 COLORS
 ***********************************************/
-/* line 89, ../components/sass/_globals.scss */
+/* line 88, ../components/sass/_globals.scss */
 body {
   color: #737878;
-  background: url("../img/light_grey_@2X.jpg");
+  background: url("../images/background/light_grey_@2X.jpg");
 }
 
-/* line 94, ../components/sass/_globals.scss */
+/* line 93, ../components/sass/_globals.scss */
 .calendar, .photo {
   background: url("../img/cream_dust_@2X.png");
 }
 
 /* logo text*/
-/* line 100, ../components/sass/_globals.scss */
+/* line 99, ../components/sass/_globals.scss */
 h1, h2 {
   color: #DDEBF3;
 }
 
-/* line 104, ../components/sass/_globals.scss */
+/* line 103, ../components/sass/_globals.scss */
 a {
   color: #739FF3;
 }
 
 /* selected nav link */
-/* line 110, ../components/sass/_globals.scss */
+/* line 109, ../components/sass/_globals.scss */
 nav a {
   color: #DDEBF3;
 }
-/* line 112, ../components/sass/_globals.scss */
+/* line 111, ../components/sass/_globals.scss */
 nav a:visited {
   color: #DDEBF3;
 }
-/* line 115, ../components/sass/_globals.scss */
+/* line 114, ../components/sass/_globals.scss */
 nav a.selected, nav a:hover {
   color: #92999E;
 }
@@ -576,16 +599,6 @@ PAGE: PORTFOLIO
   text-align: center;
   color: #737878;
 }
-/* line 2, ../components/sass/_mixins.scss */
-.gallery li p a {
-  text-decoration: none;
-  color: #575C61;
-}
-/* line 5, ../components/sass/_mixins.scss */
-.gallery li p a:hover {
-  border-top: 2px solid darkgrey;
-  border-bottom: 2px solid darkgrey;
-}
 /* line 37, ../components/sass/_portfolio.scss */
 .gallery img {
   width: 98.5%;
@@ -608,7 +621,7 @@ PAGE: PORTFOLIO
 }
 /* line 55, ../components/sass/_portfolio.scss */
 .overlay img {
-  margin-top: 30%;
+  margin-top: 25%;
   width: 60%;
 }
 
@@ -661,16 +674,6 @@ ABOUT
   max-width: 96%;
   margin: 0 auto;
   padding: 12px;
-}
-/* line 2, ../components/sass/_mixins.scss */
-.discription p a {
-  text-decoration: none;
-  color: #575C61;
-}
-/* line 5, ../components/sass/_mixins.scss */
-.discription p a:hover {
-  border-top: 2px solid darkgrey;
-  border-bottom: 2px solid darkgrey;
 }
 @media screen and (min-width: 660px) {
   /* line 36, ../components/sass/_about.scss */
@@ -781,19 +784,19 @@ Blog
   }
 }
 /* line 28, ../components/sass/_blog.scss */
-.blog-page:nth-child(4n+1) #blog-head, .blog-page:nth-child(4n+1) #blog-base {
+.blog-page:nth-child(4n+1) .blog-head, .blog-page:nth-child(4n+1) .blog-base {
   background: rgba(11, 177, 186, 0.6);
 }
 /* line 33, ../components/sass/_blog.scss */
-.blog-page:nth-child(4n+2) #blog-head, .blog-page:nth-child(4n+2) #blog-base {
+.blog-page:nth-child(4n+2) .blog-head, .blog-page:nth-child(4n+2) .blog-base {
   background: rgba(194, 139, 90, 0.6);
 }
 /* line 38, ../components/sass/_blog.scss */
-.blog-page:nth-child(4n+3) #blog-head, .blog-page:nth-child(4n+3) #blog-base {
+.blog-page:nth-child(4n+3) .blog-head, .blog-page:nth-child(4n+3) .blog-base {
   background: rgba(115, 65, 185, 0.6);
 }
 /* line 43, ../components/sass/_blog.scss */
-.blog-page:nth-child(4n) #blog-head, .blog-page:nth-child(4n) #blog-base {
+.blog-page:nth-child(4n) .blog-head, .blog-page:nth-child(4n) .blog-base {
   background: rgba(123, 134, 140, 0.6);
 }
 

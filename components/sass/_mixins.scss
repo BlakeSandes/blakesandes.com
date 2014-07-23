@@ -1,4 +1,4 @@
-@mixin link {
+%link {
   a {
     text-decoration: none;
     color: #575C61;
@@ -6,6 +6,16 @@
       border-top: 2px solid darkgrey;
       border-bottom: 2px solid darkgrey;
     }
+  }
+}
+
+%navLink {
+  color: #DDEBF3;
+  &:visited {
+    color: #DDEBF3;
+  }
+  &.selected, &:hover {
+    color: #92999E;
   }
 }
 

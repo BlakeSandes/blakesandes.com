@@ -38,7 +38,7 @@ ABOUT
   max-width: 96%;
   margin: 0 auto;
   padding: 12px;
-  @include link;
+  @extend %link;
   @media screen and (min-width: 660px) {
     @include about_left;
     &:nth-child(4) {

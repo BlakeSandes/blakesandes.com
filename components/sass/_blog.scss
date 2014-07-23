@@ -25,22 +25,22 @@ Blog
     }
   }
   &:nth-child(4n+1) {
-    #blog-head, #blog-base {
+    .blog-head, .blog-base {
       background: rgba(11,177,186, .60);
     }
   }
   &:nth-child(4n+2) {
-    #blog-head, #blog-base {
+    .blog-head, .blog-base {
       background: rgba(194,139,90, .60);
     }
   }
   &:nth-child(4n+3) {
-    #blog-head, #blog-base {
+    .blog-head, .blog-base {
       background: rgba(115,65,185, .60);
     }
   }
   &:nth-child(4n) {
-    #blog-head, #blog-base {
+    .blog-head, .blog-base {
       background: rgba(123,134,140, .60);
     }
   }
