@@ -1,3 +1,17 @@
+
+%clearfix {
+  &:before, &:after {
+    content:" ";
+    display:table;
+  }
+  &:before {
+    clear:both;
+  }
+  & {
+    *zoom:1;
+  }
+}
+
 %link {
   a {
     text-decoration: none;
@@ -19,10 +33,4 @@
   }
 }
 
-//media query for paragraph on about page
 
-@mixin about_left {
-	clear: none;
-	float: left;
-	width: 48%;
-}

@@ -1,55 +1,70 @@
-/***********************************************
-ABOUT
-***********************************************/
 
-.photo-border {
-  display: block;
-  width: 90%;
-  margin: 0px auto;
-  box-shadow: inset 0 0 3.5px #737878;
-  border-radius: 0px 0px 8px 8px;
-  @media screen and (min-width: 660px) {
-    float: right;
-    width: 45%;
-    margin-bottom: 48px;
+
+.wrap {
+  position: relative;
+  min-height: 100%;
+  .purpose_statement {
+    display: block;
+    background: rgba(125,206,255,.6);
+    width: 50%;
+    float: left;
+
   }
-}
 
-.profile-photo {
-  width: 89%;
-  margin: 0px auto;
-  padding: 4.5% 0% 8%;
-  border-radius: 3px;
-  display: block;
-}
+  .selfie {
+    display: block;
+    width: 50%;
+    float:right;
 
-.discription h3 {
-  margin: 24px 0px;
-}
-
-.about_text {
-  box-shadow: inset 0 0 3.5px 1px #737878;
-  margin-left: 16px;
-  padding: 4px;
-}
-
-.discription p {
-  clear: both;
-  max-width: 96%;
-  margin: 0 auto;
-  padding: 12px;
-  @extend %link;
-  @media screen and (min-width: 660px) {
-    @include about_left;
-    &:nth-child(4) {
-      @include about_left;
-      clear: left;
+    img {
+      margin-bottom: -7px;
+      height: inherit; 
     }
   }
-  @media only screen and (min-width: 660px) and (max-width: 844px) {
-    &:last-child {
-    float: right;
-    width: 48%;
+
+  .contact {
+    display: block;
+    width: 50%;
+    float:left;
+    background:rgba(125,206,255,.7);
+    ul {
+      list-style: none;
+      display: block;
+      margin: 0px auto;
+      font-size: .95em;
+      padding: 0;
+      li {
+        a {
+          display: block;
+          padding: 0 10px 0 10px;
+          margin: 0 0 12px;
+          text-align: center;
+          color: #737878;
+          text-decoration: none;
+          .phone, .mail, .twitter {
+            height: 1.3em;
+            position: relative;
+            top: 3px;
+          }
+        }
+      }
     }
   }
-}
+
+
+
+  .personal_statement {
+    display: block;
+    width: 50%;
+    float:right;
+    background: rgba(125,206,255,.8);
+    p {
+      @extend %link; 
+            
+    }
+    
+  }
+}  
+
+
+
