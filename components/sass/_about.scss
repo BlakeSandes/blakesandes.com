@@ -13,6 +13,9 @@
     @media (min-width: 620px) {
       width: 291px;
     }
+    @media (min-width: 695px) {
+      margin-right: 6%;
+    }
     img {
       height: 100%;
       margin-bottom: -7px;
@@ -33,20 +36,41 @@
       font-size: .95em;
       padding: 0;
       li {
-        a {
-          display: block;
-          padding: 0 10px 0 10px;
-          margin: 0 0 12px;
-          text-align: center;
-          color: #737878;
-          text-decoration: none;
-          .phone, .mail, .twitter {
-            height: 1.3em;
-            width: inherit;
-            position: relative;
-            top: 3px;
-
+        width: 100%;
+        text-align: center;
+        &:nth-child(2) {
+          a {
+            margin-left: 6%;
           }
+          img {
+            left: -20px;
+            top: .16em;
+            height: 1.5em;
+          }
+          span {
+            font-size: .90em; 
+          }
+        }
+
+        a {
+          position: relative;
+          display: inline-block;
+          margin: 0 0 12px 36px;
+          color: #737878;
+          transition: background .5s, color 0s, padding .5s;
+          &:hover {
+            @extend %hoverStyle;
+            border-radius: 2px;
+            padding: 2px;
+          }
+          img {
+            position: absolute;
+            height: 1.3em;
+            top: .3em;
+            left: -18px;
+            width: inherit;
+          }
+        
         }
       }
     }

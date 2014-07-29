@@ -23,15 +23,17 @@
   }
 }
 
-%navLink {
-  color: #92999E;
-    &:hover {
-      color: #DDEBF3;
-      background: rgba(120,126,165, 1);
-    }
-    &.selected {
-      color: orange;
-    } 
+%hoverStyle {
+  background: $hoverBG;
+  box-shadow: 0 0 1px rgba(255,255,255,.06);
+  color: lighten($navBG, 12%);
 }
+
+%navButton {
+  color: $navColor;
+  background: $navBG;
+  box-shadow: 0 0 1px $navColor;
+}
+
 
 
