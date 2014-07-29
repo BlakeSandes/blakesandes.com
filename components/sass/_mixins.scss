@@ -17,20 +17,21 @@
     text-decoration: none;
     color: #575C61;
     &:hover {
-      border-top: 2px solid darkgrey;
-      border-bottom: 2px solid darkgrey;
+      border-top: 2px solid rgba(146,153,158, 1);
+      border-bottom: 2px solid rgba(146,153,158, 1);
     }
   }
 }
 
 %navLink {
-  color: #DDEBF3;
-  &:visited {
-    color: #DDEBF3;
-  }
-  &.selected, &:hover {
-    color: #92999E;
-  }
+  color: #92999E;
+    &:hover {
+      color: #DDEBF3;
+      background: rgba(120,126,165, 1);
+    }
+    &.selected {
+      color: orange;
+    } 
 }
 
 

@@ -1,19 +1,11 @@
 
-/***********************************************
-Blog
-***********************************************/
 
 
 .blog-page {
   background: transparent;
-  border-radius: 3px 3px 0px 0px;
-  box-shadow: 0 0 12px #737878;
+  box-shadow: 0 0 3px #737878;
   min-width: 300px;
   margin-top: 3px;
-  border-radius: 0px 0px 4px 4px;
-
-  
-  
   
   @media only screen and (min-width: 661px) {
     &:nth-child(even),
@@ -24,6 +16,7 @@ Blog
 
     }
   }
+
   &:nth-child(4n+1) {
     .blog-head, .blog-base {
       background: rgba(11,177,186, .60);
@@ -44,62 +37,61 @@ Blog
       background: rgba(123,134,140, .60);
     }
   }
-}
+  .blog-head {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    margin: 0px auto;
+    .photo {
+      display: inline-block;
+      float: right;
+      width: 100px;
+      height: 100px;
+      margin: 0;
+      padding: 0;
+      img {
+        width: 96%;
+        margin: 2% auto;
+        display: block;
+      }
 
-.blog-head {
-  width: 100%;
-  height: 120px;
-  padding: 12px;
-  margin: 0px auto;
-}
-
-.photo {
-  display: inline-block;
-  float: right;
-  width: 100px;
-  height: 100px;
-  margin: 0;
-  padding: 0;
-  img {
-    width: 96%;
-    margin: 2% auto;
-    display: block;
-  }
-
-}
-
-.calendar {
-  display: inline-block;
-  width: 30%;
-  float: left;
-  color: #737878;
-  ul {
-    list-style: none;
-    float: left;
-    padding-left: 12px;
-    li {
-      line-height: 1.4em;
-      font-size: 1rem;
+    }
+    .calendar {
+      display: inline-block;
+      width: 30%;
+      float: left;
+      color: #737878;
+      ul {
+        list-style: none;
+        float: left;
+        padding-left: 12px;
+        li {
+          line-height: 1.4em;
+          font-size: 1rem;
+        }
+      }
     }
   }
-}
-.tab {
-  
+  .blog-post {
+    overflow: auto;
+    height: 300px;
+    padding: 6px;
+  }
+
+  .blog-base {
+    width: 100%;
+    height: 12px;
+    padding: 12px;
+    margin: 0px auto;
+  }
 }
 
-.blog-post {
-  overflow: auto;
-  height: 300px;
-  padding: 6px;
-}
 
-.blog-base {
-  width: 100%;
-  height: 12px;
-  padding: 12px;
-  margin: 0px auto;
-  border-radius: 0px 0px 4px 4px;
-}
+
+
+
+
+
 
 
 

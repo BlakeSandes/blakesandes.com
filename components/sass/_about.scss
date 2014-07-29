@@ -1,35 +1,34 @@
 
-
-.wrap {
-  position: relative;
-  min-height: 100%;
+.main {
+  margin: 2%;
   .purpose_statement {
-    display: block;
-    background: rgba(125,206,255,.6);
-    width: 50%;
     float: left;
-
+    background: $sectionBG;
   }
 
   .selfie {
-    display: block;
-    width: 50%;
-    float:right;
-
-    img {
-      margin-bottom: -7px;
-      height: inherit; 
+    margin-right: 0;
+    float: right;
+    padding: 0;
+    @media (min-width: 620px) {
+      width: 291px;
     }
+    img {
+      height: 100%;
+      margin-bottom: -7px;
+    }
+
   }
 
   .contact {
-    display: block;
-    width: 50%;
-    float:left;
-    background:rgba(125,206,255,.7);
+    float: right;
+    margin-right: 0;
+    background: $sectionBG;;
+    @media (min-width: 620px) {
+      float: left;
+    }
     ul {
       list-style: none;
-      display: block;
       margin: 0px auto;
       font-size: .95em;
       padding: 0;
@@ -43,8 +42,10 @@
           text-decoration: none;
           .phone, .mail, .twitter {
             height: 1.3em;
+            width: inherit;
             position: relative;
             top: 3px;
+
           }
         }
       }
@@ -54,17 +55,25 @@
 
 
   .personal_statement {
-    display: block;
-    width: 50%;
-    float:right;
-    background: rgba(125,206,255,.8);
+    float: left;
+    margin: 0 auto;
+    background: $sectionBG;
+    @media (min-width: 620px) {
+      p {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
     p {
+
       @extend %link; 
             
     }
     
-  }
-}  
+  }  
+}
+
+
 
 
 
