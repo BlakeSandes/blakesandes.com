@@ -784,7 +784,7 @@ PAGE: PORTFOLIO
 }
 /* line 42, ../components/sass/_about.scss */
 .main .contact ul li:nth-child(2) a {
-  margin-left: 6%;
+  margin-left: 9%;
 }
 /* line 45, ../components/sass/_about.scss */
 .main .contact ul li:nth-child(2) img {
@@ -794,7 +794,7 @@ PAGE: PORTFOLIO
 }
 /* line 50, ../components/sass/_about.scss */
 .main .contact ul li:nth-child(2) span {
-  font-size: .90em;
+  font-size: .78em;
 }
 /* line 55, ../components/sass/_about.scss */
 .main .contact ul li a {
