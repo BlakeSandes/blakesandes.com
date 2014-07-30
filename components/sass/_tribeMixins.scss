@@ -1,0 +1,86 @@
+
+%clearfix {
+  &:before, &:after {
+    content:" ";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+  & {
+    *zoom:1;
+  }
+}
+
+
+
+%fontStyle {
+  font-weight: bold;
+  font-size: 1.13em;
+  color: $fontColor;
+  text-shadow: 1px 1px 1px rgba(255,255,255,.75);
+}
+
+%buttonStyle {
+  border: .98px solid rgba(255,255,255,.12);
+  box-shadow: inset 0 0 4px rgba(94,153,184,.5),
+              0 0 1px 1.5px rgba(68,110,133,.95);
+
+   
+  border-radius: $buttonRadius;          
+  
+  text-align: center;
+
+  transition-duration: 1s;
+  background: radial-gradient(rgba(94,153,184,1) 20%, rgba(94,153,184,.5));
+
+  background-color: $buttonColor;
+  @extend %fontStyle; 
+  &:hover {
+    @extend %hoverStyle;
+  }
+  &:focus {
+    @extend %focusStyle;
+    @extend %hoverStyle;
+  }
+}
+
+
+
+%hoverStyle {
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(94,153,184,.1), rgba(94,153,184,.2));
+
+  background-color: $hoverColor;
+  transition: background-color, .5s;
+  color: lighten($fontColor, 8%);
+}
+
+%focusStyle {
+  outline: none;
+  box-shadow: 0px 0px 6px rgba(2,247,49,.75),
+              inset 0px 0px 6px rgba(103,255,39,.75);
+}
+
+%inputStyle {
+  
+  color: rgba(62,35,76,.85);
+  background: linear-gradient(rgba(255, 255, 255,.90) 40%, rgba(255, 255, 255,.65) 60%);
+
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+
+  box-shadow: .5px .5px 1.5px rgba(94,153,184,.75),
+              -.5px -.5px 1.5px rgba(94,153,184,.75);
+
+  &:focus {
+    @extend %focusStyle;
+  }
+
+}
+
+
+
+
+

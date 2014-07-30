@@ -1,0 +1,104 @@
+/*FORM*/
+
+.form {
+  font: .85em/1em Arial, Helvetica, Geneva, sans-serif;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  legend {
+    display: none;
+
+  }
+  fieldset {
+    border: none;
+    background: silver;
+    padding: 0;
+    margin: 4px auto 6px;
+  
+    
+    background: linear-gradient(rgba(143,201,255,.5), rgba(94,153,184,.75));
+    box-shadow: inset 6px 6px 6px rgba(94,153,184,.5),
+                  inset -6px 0 6px rgba(94,153,184,.5);
+    
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+
+    &:before {
+      content: attr(title);
+      display: block;
+      padding: 0;
+      padding: 24px 12px 18px;
+      margin: 0 auto;
+
+      @extend %fontStyle;
+    }        
+      ol {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          position: relative;
+          list-style: none;
+          padding: 12px 6px 12px;
+          border-top: 1px solid rgba(255,255,255,.75);
+          border-bottom: 1px solid rgba(99,98,99,.85);
+          
+          &:first-child {
+            border-top: none;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+
+        } 
+      }
+
+    .signUpFooter {
+      height: 48px;
+      margin:  0;
+      box-shadow: -0px -1px 0px rgba(255,255,255,.75),
+                  -0px -2px 0px rgba(99,98,99,.85);
+      .prev {
+        display: block;
+        float: left;
+        width: 72px;
+        height: 24px;
+        margin: 14px 0 0 24px;
+        @extend %buttonStyle;
+        background: mix($buttonColor, aqua);
+      }
+      .next {
+        display: block;
+        float: right;
+        width: 72px;
+        height: 24px;
+        margin: 14px 24px 0 0;
+        @extend %buttonStyle;
+        background: invert($buttonColor);
+      }
+    }
+    
+  }
+}
+
+
+
+
+.button {
+  
+  @extend %buttonStyle;
+  width: 72px;
+  padding: 4px;
+  float: right;
+  margin: 24px 48px 100% 0;
+  background: mix($buttonColor, gold);
+  &:hover {
+    @extend %fontStyle;
+    @extend %hoverStyle;
+  }
+  &:focus {
+  @extend %focusStyle;
+  }
+}

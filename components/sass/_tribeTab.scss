@@ -1,0 +1,47 @@
+
+.tabs {
+  ul {
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0;
+    
+    button {
+      list-style: none;
+      width: 80px;
+      display: inline-block;
+      text-align: center;
+      margin: 0 5px;
+      padding: 2px 0;
+      border-radius: 1.5px 1.5px 0 0;
+      @extend %fontStyle;
+      @extend %buttonStyle;
+      &:hover {
+        @extend %fontStyle;
+        @extend %hoverStyle;
+      }
+      &:focus {
+        @extend %fontStyle;
+        @extend %buttonStyle;
+      }
+    }
+    .logintab {
+      float: right;
+      margin-right: 6%;
+      background: mix($buttonColor, silver);
+    }
+    .gendertab {
+      margin-left: 6%;
+      background: mix($buttonColor, aqua);
+    } 
+    .tribetab {
+      background: invert($buttonColor);
+    }
+  }  
+}
+
+#hiddenField {
+  display: none;
+}

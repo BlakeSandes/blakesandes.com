@@ -1,0 +1,31 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+form * {
+  background: transparent;
+}
+
+html {
+  background: -webkit-linear-gradient(rgba(217,235,255,.75), rgba(138,145,158,.75));
+  background: -o-linear-gradient(rgba(217,235,255,.75), rgba(138,145,158,.75));
+  background: linear-gradient(rgba(217,235,255,.75), rgba(138,145,158,.75));
+  box-shadow: inset 6px 12px 48px rgba(138,145,158,.75), 
+              inset -6px 0 48px rgba(138,145,158,.75);
+}
+
+
+/*============CLEAR DEFAULT INPUT STYLES============*/
+
+input[type=text], input[type=email],input[type=password], 
+input[type=url], input[type=tel],
+textarea, button, select {
+  border: none;
+  background: transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+}

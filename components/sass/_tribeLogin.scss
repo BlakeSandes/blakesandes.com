@@ -1,0 +1,67 @@
+/*============LOGIN INFO STYLES============*/
+
+
+
+.login  { 
+  
+  label {
+    display: block;
+    padding-left: 12.5%;
+    margin-bottom: 8px;
+    margin-top: 0;
+    color: rgba(66,108,130,1);
+    text-shadow: 1px 1px 1px rgba(255,255,255,.75);
+  }
+
+  .loginOptions input, .signUpOptions input {
+    display: block;
+    width: 75%;
+    height: 2em;
+    margin: 0 auto;
+    padding-left: 12px;
+    @extend %inputStyle;
+  } 
+
+  .loginOptions {
+    li:first-child {
+      box-shadow:-0 -1px 0 rgba(255,255,255,.85), 
+                -0 -2px 0 rgba(99,98,99,.75);
+    }
+    li:last-child {
+      box-shadow: 0 1px 0 rgba(99,98,99,.85),
+              0 2px 0 rgba(255,255,255,.75);
+    }
+  }
+
+  .signUpOptions {
+    display: none; 
+    li {
+      &:last-child {
+        box-shadow: 0 1px 0 rgba(99,98,99,.85),
+              0 2px 0 rgba(255,255,255,.75);
+      }
+    }
+  }
+
+  .firstFooter.signUpFooter {
+    box-shadow: none; 
+    .signupbtn {
+      display: block;
+      float: left;
+      width: 72px;
+      height: 24px;
+      margin: 14px 0 0 24px;
+      @extend %buttonStyle;
+      background: mix($buttonColor, silver);
+    }
+    .next {
+      background: mix($buttonColor, aqua);
+    }
+  }
+  
+}
+
+  
+  
+
+

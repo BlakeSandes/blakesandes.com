@@ -1,0 +1,166 @@
+
+/*======HEADER======*/
+
+div.header {
+  max-width: 400px;
+  height: 80px;
+  margin: 48px auto 0;
+  padding: 0;
+  background: rgba(159,183,186,.85);
+  @extend %boxStyle;
+  
+  h1 {
+    margin: 0;
+    text-align: center; 
+    padding-top: 20px; 
+    font-size: 1.8em;
+    @extend %fontStyle;
+  }
+  
+}
+
+
+/*======TIMES======*/
+
+.times {
+
+  ol {
+    li {
+      @include clearfix;
+      margin: 0;
+      &:first-child {
+        margin: 12px 10% 0 0; 
+      }
+      &:last-child {
+        margin: 24px 10% 24px 0; 
+      }
+      
+      label {
+        display: block;
+        float: left;
+        width: 28%;
+        height: 24px;
+        margin-left: 7%;
+        padding-top: 2px;
+        border-right: 1px solid grey;
+        
+      }
+      input[type=date] {
+        display: block;
+        outline: none;
+        float: right;
+        width: 48%;
+        margin: 0;
+        padding-left: 6px;
+        @extend %inputStyle;
+      }
+    } 
+  }
+
+}
+
+/*======PLACES======*/
+
+.places {
+  >ol {
+    position: relative;
+    @include clearfix;
+    margin: 0 auto;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+    .place, .choosePlace  {
+      height: 24px;
+      display: block;
+      
+      
+    }
+    
+    
+    .choosePlace {
+      z-index: 2;
+      width: 83%;
+      margin: 0 10% 36px 7%;
+      padding: 0;
+      border: none;
+      background: -webkit-linear-gradient(left, rgba(159,183,186,.65), rgba(159,183,186,1) 80%);
+      background: -o-linear-gradient(left, rgba(159,183,186,.65), rgba(159,183,186,1) 80%);
+      background: linear-gradient(to right, rgba(159,183,186,.65), rgba(159,183,186,1) 80%);;
+      box-shadow: inset 0 0 1px grey,
+                  0 0 1px grey;
+      -webkit-border-radius: 2px 0 0 2px;
+      -moz-border-radius: 2px 0 0 2px;
+      border-radius: 2px 0 0 2px;
+
+      &:first-child {
+        margin-top: 24px;
+      }
+      .notChoice {
+        display: none;
+      }
+      .choice {
+        position: absolute;
+        z-index: 1;
+        left: 45.5%;
+        width: 44.5%;
+        height: 24px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .place {
+        @extend %inputStyle;
+        float: left;
+        width:46%;
+        margin: 0;
+
+        li {
+          margin: 0;
+          padding-left: 8px;
+          label:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      
+      .destination {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        left: 45.5%;
+        width: 44.5%;
+        padding: 0;
+        @extend %inputStyle;
+        li {
+          margin: 0 ;
+          padding: 0;
+          margin: 3px auto;
+          text-align: center;
+          @extend %inputStyle;
+          @extend %submitStyle;
+          &:first-child {
+            margin: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          input[type=radio]{
+            display: none;
+          }
+          input[type=radio] + label {
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            height: 24px;
+            @extend %inputStyle;
+            @extend %submitStyle;
+          }  
+          input[type=radio]:checked +label {
+            @extend %checkedStyle;
+          }         
+        }
+      }
+    } 
+  }
+}

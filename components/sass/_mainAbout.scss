@@ -1,5 +1,9 @@
 
-.main {
+.about {
+  p {
+    color: darken($navColor, 8%);
+    padding: 0 6px;
+  }
   margin: 2%;
   .purpose_statement {
     float: left;
@@ -13,7 +17,7 @@
     @media (min-width: 620px) {
       width: 291px;
     }
-    @media (min-width: 695px) {
+    @media (min-width: 705px) {
       margin-right: 6%;
     }
     img {
@@ -89,11 +93,8 @@
       }
     }
     p {
-
       @extend %link; 
-            
     }
-    
   }  
 }
 

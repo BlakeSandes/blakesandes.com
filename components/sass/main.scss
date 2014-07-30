@@ -2,17 +2,16 @@
 @import "compass";
 @import "normalize";
 @import "grid";
-@import "variables";
 
-@import "mixins";
+//Main scss
+@import "mainVariables";
+@import "mainMixins";
+@import "mainGlobals";
+@import "mainNav";
+@import "mainAbout";
+@import "mainPortfolio";
+@import "mainBlog";
 
-@import "globals";
-@import "nav";
-
-@import "portfolio";
-@import "about";
-@import "blog";
-
-//Projects
-
+//Woodwork Gallery
 @import "woodwork";
+

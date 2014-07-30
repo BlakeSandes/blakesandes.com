@@ -30,7 +30,8 @@ img {
   .grid > [class^="col-"] {
     min-height: 1px;
     margin-bottom: 2%;
-    padding: 6px;
+    margin-right: 2%;
+    float: left;
   }
   .grid > [class^="col-"]:first-child {
     margin-left: 0;

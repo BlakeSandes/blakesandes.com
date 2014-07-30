@@ -25,6 +25,7 @@ GENERAL
 
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.6em;
   max-width: 1200px;
   @media only screen and (min-width: 960px) {
     width: 960px;
@@ -58,9 +59,6 @@ body {
         margin: 0 6px;
       }
 
-      p {
-        margin: 0 auto;
-      }
     }
   }
 }
@@ -79,30 +77,10 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-/***********************************************
-COLORS
-***********************************************/
-
-body {
-  p {
-    color: darken($navColor, 8%);
-  }
-}
-
-
  
-  .calendar, .photo {
-    background: url('../images/background/cream_dust_@2X.png');
-  }
+.calendar, .photo {
+  background: url('../images/background/cream_dust_@2X.png');
+}
 
 
 

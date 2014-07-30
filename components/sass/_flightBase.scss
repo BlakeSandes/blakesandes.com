@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+/*======CLEAR FLOATS======*/
+@mixin clearfix {
+    &:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+/*======CLEAR INPUT FIELDS ETC.======*/
+
+input[type=date],input[type=submit] {
+  border: none;
+  border-radius: 0;
+}
+
+
+/*======SHARED FORM STYLES======*/
+
+.mainForm {
+  max-width: 400px;
+  margin: 12px auto;
+  @extend %fontStyle;
+  @include clearfix;
+  >fieldset::before {
+  content: attr(title);
+  display: inline-block;
+  margin: 12px 0 0 8px;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.6em;
+  }
+  fieldset {
+    margin: 12px auto;
+    padding: 0;
+    border: none;
+    @extend %boxStyle;
+    legend {
+      display: none;
+    }
+    ol {
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+    }  
+  }
+}

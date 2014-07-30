@@ -1,0 +1,76 @@
+/*============GENDER INFO STYLES============*/
+
+.infoheader {
+  color: rgba(68,110,133,.90);
+  text-shadow: 1px 1px 1px rgba(255,255,255,.75);
+  padding: 0 0 6px 12px;
+  box-shadow: 0 1px 0 rgba(99,98,99,.85),
+              0 2px 0 rgba(255,255,255,.75);
+}
+
+.gender {
+  position: relative;
+  .type, .orientation {
+    margin: 0 12px;
+    li {
+      display: inline-block;
+      border: none;
+      padding-right: 6px;
+      label, textarea {
+        color: rgba(66,108,130,1);
+        text-shadow: 1px 1px 1px rgba(255,255,255,.75);
+      }
+    }
+  }
+  textarea {
+    display: block;
+    padding: 6px 6px 0;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+
+    background: -webkit-linear-gradient(rgba(255, 255, 255,.90) , rgba(255, 255, 255,.50));
+    background: -o-linear-gradient(rgba(255, 255, 255,.90) , rgba(255, 255, 255,.50));
+    background: linear-gradient(rgba(255, 255, 255,.90) , rgba(255, 255, 255,.50));
+
+    box-shadow: .5px .5px 1.5px rgba(94,153,184,.96),
+                -.5px -.5px 1.5px rgba(94,153,184,.96);
+    
+    color: rgba(62,35,76,.85);
+    &:focus {
+      @extend %focusStyle;
+    }
+  }
+
+  .secondFooter.signUpFooter .prev {
+    background: mix($buttonColor, silver); 
+  }
+
+
+/*======Styling for expanding textarea======*/
+
+
+  .txtstuff {
+    resize: none;
+    overflow: hidden;
+  }
+  .common {
+    width: 75%;
+    min-height: 64px;
+    margin: 0 auto 16px;
+    overflow: hidden;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+  }
+
+  .hiddendiv {
+    display: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .lbr {
+    line-height: 3px;
+  }
+}

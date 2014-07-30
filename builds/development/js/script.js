@@ -1,4 +1,106 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$ = require('jquery');
+
+
+//When submit button clicked, depending on option, presented with 
+// notification and confirm button.
+ 
+
+
+$(".button").on("click", function(evt) {
+  evt.preventDefault();
+
+  var selection1 = $(".canadaOptions input:checked").val(),
+      selection2 = $(".usOptions input:checked").val(),
+      selection3 = $(".euroOptions input:checked").val();
+
+  var confirmSelection = $("<input type='submit' value='confirm' name='confirmSubmit'>");
+  
+  function confirmIt() {
+    $(".notify").on("click", confirmSelection, function() {
+      $(this).closest(".notify").html("<p>Thank you, please proceed to payment</p>");
+    }); 
+  }    
+  
+  var departing = $("#departing").val();
+  var returning = $("#returning").val();
+
+  $(".notify").slideDown('fast', function() {
+    if (departing && returning) {
+      if (selection1) {
+        $(this).html("<p>Please confirm your reservation for " + selection1 +  " departing on " + 
+          departing + " and returning on " + returning + ".</p>");
+        $(this).append(confirmSelection);
+        confirmIt();
+      } else if (selection2) {
+        $(this).html("<p>Please confirm your reservation for " + selection2 +  " departing on " + 
+          departing + " and returning on " + returning + ".</p>"); 
+        $(this).append(confirmSelection);
+        confirmIt(); 
+      } else if (selection3) {
+        $(this).html("<p>Please confirm your reservation for " + selection3 +  " departing on " + 
+          departing + " and returning on " + returning + ".</p>");
+        $(this).append(confirmSelection);
+        confirmIt(); 
+      } else {
+        $(this).html("<p>Please select a departure city!</p>");
+      }
+    } else {
+      $(this).html("<p>Please select departing and returning dates</p>");
+    }
+  }); 
+}); 
+
+
+//City options slideToggle when hovered over.
+
+$(".choosePlace").hover(function() {
+  var $destination = $(this).find(".destination");
+  $destination.slideToggle(200);
+
+});
+
+//Selected city option is added visible.
+
+$(".destination").on("click", "input[type=radio]", function() {
+
+  var selection1 = $(".canadaOptions input:checked").val(),
+      selection2 = $(".usOptions input:checked").val(),
+      selection3 = $(".euroOptions input:checked").val();
+
+  if (selection1) {
+    $(this).closest(".places").find(".usChoice").addClass("notChoice");
+    $(this).closest(".places").find(".euroChoice ").addClass("notChoice");
+    $(this).closest(".destination").prev(".choice").removeClass("notChoice");
+    $(this).closest(".destination").prev(".choice").html(selection1);
+  } else if (selection2) {
+    $(this).closest(".places").find(".cdnChoice").addClass("notChoice");
+    $(this).closest(".places").find(".euroChoice").addClass("notChoice");
+    $(this).closest(".destination").prev(".choice").removeClass("notChoice");
+    $(this).closest(".destination").prev(".choice").html(selection2);
+  } else if (selection3) {
+    $(this).closest(".places").find(".cdnChoice").addClass("notChoice");
+    $(this).closest(".places").find(".usChoice").addClass("notChoice");
+    $(this).closest(".destination").prev(".choice").removeClass("notChoice");
+    $(this).closest(".destination").prev(".choice").html(selection3);  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var $;
 
 $ = require('jquery');
@@ -37,6 +139,165 @@ $overlay.click(function(){
 var $;
 
 $ = require('jquery');
+
+
+
+
+
+//CREATES EXPANDING TEXTAREA//////////////////////
+
+  var txt = $('#comments'), 
+    hiddenDiv = $(document.createElement('div')),
+    content = null;
+
+  txt.addClass('txtstuff');
+  hiddenDiv.addClass('hiddendiv common');
+
+  $('.gender').append(hiddenDiv);
+
+  txt.on('keyup', function() {
+    content = $(this).val();
+
+    content = content.replace(/\n/g, '<br>');
+    hiddenDiv.html(content + '<br class="lbr">');
+
+    $(this).css('height', hiddenDiv.height());
+  });
+
+//////////////////////////////////////////////////
+
+
+
+
+var $; 
+
+$ = require('jquery');
+
+
+//HIDE SIGN UP///
+
+$(".signupbtn").on("click", function() {
+  //$(".logsign").toggleClass("logsignBox");
+  $(".signUpOptions").slideToggle("fast");  
+});
+//$(".signupbtn").on("click.compress", up);
+
+
+
+
+
+
+
+
+
+
+
+$(".tribeList").hide();
+
+$(".tribediv").on("click", ".tribeorb", function() {
+  
+  //When first .tribeorb clicked it slideToggles.
+  $(this).closest("div").next(".tribeList").slideToggle("fast")
+  
+  //When next header is clicked it slides down as previous header slides up.
+  .closest(".tribediv").siblings().find(".tribeList:visible").slideUp("fast");  
+   
+});
+
+
+////////////When tab clicked////////////
+
+$("nav").on("click", "button", function(evt) {
+  
+    //Code I came up with!!!
+    /*var self = $(this);
+    if(self.hasClass("logintab")) {
+      self.closest("nav").next().find(".gender").addClass("hiddenField");
+      self.closest("nav").next().find(".tribes").addClass("hiddenField");
+      self.closest("nav").next().find(".login").removeClass("hiddenField");
+    } else if (self.hasClass("gendertab")) {
+      self.closest("nav").next().find(".login").addClass("hiddenField");
+      self.closest("nav").next().find(".tribes").addClass("hiddenField");
+      self.closest("nav").next().find(".gender").removeClass("hiddenField"); 
+    } else if (self.hasClass("tribetab")) {
+      self.closest("nav").next().find(".login").addClass("hiddenField");
+      self.closest("nav").next().find(".gender").addClass("hiddenField");
+      self.closest("nav").next().find(".tribes").removeClass("hiddenField");  
+    }
+    */
+
+//Code inspired by experienced developer!!!
+
+  //Make all navtabs inactive.
+  $("nav button").prop("id", "");
+
+  //Make the one clicked active. 
+  $(this).prop("id", "activetab"); 
+
+  //Hide all the fieldsets.
+  $("fieldset").prop("id", "hiddenField");
+
+  //Get the title of the nav clicked.
+  var tabClicked = $(this).attr("data");
+
+  //Make the class of what we clicked not hidden.
+  $("fieldset[data=" +tabClicked+ "]").prop("id", "");
+
+});
+
+  ////////////Next Button Functionality////////////
+
+$(".next").on("click", function(evt) {
+  evt.preventDefault();
+  //Hide all the fieldsets.
+  $(this).closest("fieldset").prop("id", "hiddenField");
+
+  //Make the one after the next button active.
+  $(this).closest("fieldset").next().prop("id", "");
+});
+
+  
+////////////Previous button functionality.////////////
+
+$(".prev").on("click", function(evt) {
+  evt.preventDefault();
+  //Hide all fieldsets.
+  $(this).closest("fieldset").prop("id", "hiddenField");
+
+  //Make the fieldset before the prev button active.
+  $(this).closest("fieldset").prev("fieldset").prop("id", "");
+});
+
+
+/////////////When submit button clicked/////////////////
+////////////HTML alert styling. Not sure if necessary//
+
+/*
+$("form.form").submit(function(evt) {
+  evt.preventDefault();
+  $(".message").empty();
+  $(".alert").remove();
+
+  if (($("input[type=name]").val() === "") || ($("input[type=password]").val() === "") || ($("input[type=email]").val() === "")) {
+    if ($("input[type=name]").val() === "") {
+      $(".message").append("<p>You forgot to enter your name.</p>");
+      $("#myname").after("<div class='alert' id='alertname'>Enter your name</div>");
+    }
+    if ($("input[type=password]").val() === "") {
+      $(".message").append("<p>You forgot to enter your password</p>");
+      $("#mypassword").after("<div class='alert' id='alertpassword'>Enter your password</div>");
+    }
+    if ($("input[type=email]").val() === "") {
+      $(".message").append("<p>You forgot to enter your email address</p>");
+      $("#myemail").after("<div class='alert' id='alertemail'>Enter your email</div>");
+    }
+    return false;
+  }
+  return true;
+});
+*/
+
+
 
 },{"jquery":2}],2:[function(require,module,exports){
 /*!
