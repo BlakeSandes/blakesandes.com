@@ -32,6 +32,11 @@ img {
     margin-bottom: 2%;
     padding: 6px;
   }
+  .grid > [class^="col-"]:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   .grid > [class^="col-"]:first-child {
     margin-left: 0;
   }

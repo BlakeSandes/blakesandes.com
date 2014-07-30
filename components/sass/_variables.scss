@@ -1,6 +1,8 @@
 
 //heading background gradient.
 
+//Header
+
 $headBG: linear-gradient(top, rgba(114, 170, 214, 1), rgba(130, 185, 255, 1));
 $headColor: rgba(221,235,243, 1);
 $headHover: rgba(255,251,84, .75);
@@ -10,7 +12,11 @@ $navColor: rgba(120,126,165, 1);
 $hoverBG: rgba(120,126,165, .25);
 
 
+//About page.
 $sectionBG: linear-gradient(rgba(125,206,255,.4),rgba(125,206,255,.7));
 
+//Gallery
+
+$paraBG: linear-gradient(rgba(248,255,217, .3),rgba(248,255,217, .5));
 
 $body_background: url('../images/background/light_grey_@2X.jpg');

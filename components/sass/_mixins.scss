@@ -1,12 +1,10 @@
 
 %clearfix {
-  &:before, &:after {
+  &:after {
     content:" ";
     display:table;
-  }
-  &:before {
     clear:both;
-  }
+  } 989
   & {
     *zoom:1;
   }

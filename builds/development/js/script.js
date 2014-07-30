@@ -34,9 +34,6 @@ $overlay.click(function(){
 
 
 
-var $;
-
-$ = require('jquery');
 
 },{"jquery":2}],2:[function(require,module,exports){
 /*!
