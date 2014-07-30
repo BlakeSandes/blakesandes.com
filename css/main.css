@@ -314,87 +314,80 @@ img {
 }
 
 /* line 35, ../components/sass/_grid.scss */
-.grid > [class^="col-"]:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 40, ../components/sass/_grid.scss */
 .grid > [class^="col-"]:first-child {
   margin-left: 0;
 }
 
-/* line 43, ../components/sass/_grid.scss */
+/* line 38, ../components/sass/_grid.scss */
 .grid > [class^="col-"]:last-child {
   margin-right: 0;
 }
 
 /* Columns are 65px wide, with 20px gutters
 ========================================== */
-/* line 49, ../components/sass/_grid.scss */
+/* line 44, ../components/sass/_grid.scss */
 .col-1 {
   width: 6.5%;
 }
 
-/* line 54, ../components/sass/_grid.scss */
+/* line 49, ../components/sass/_grid.scss */
 .col-2 {
   width: 15%;
 }
 
-/* line 59, ../components/sass/_grid.scss */
+/* line 54, ../components/sass/_grid.scss */
 .col-3 {
   width: 23.5%;
 }
 
-/* line 64, ../components/sass/_grid.scss */
+/* line 59, ../components/sass/_grid.scss */
 .col-4 {
   width: 32%;
 }
 
-/* line 69, ../components/sass/_grid.scss */
+/* line 64, ../components/sass/_grid.scss */
 .col-5 {
   width: 40.5%;
 }
 
-/* line 74, ../components/sass/_grid.scss */
+/* line 69, ../components/sass/_grid.scss */
 .col-6 {
   width: 49%;
 }
 
-/* line 79, ../components/sass/_grid.scss */
+/* line 74, ../components/sass/_grid.scss */
 .col-7 {
   width: 57.5%;
 }
 
-/* line 84, ../components/sass/_grid.scss */
+/* line 79, ../components/sass/_grid.scss */
 .col-8 {
   width: 66%;
 }
 
-/* line 89, ../components/sass/_grid.scss */
+/* line 84, ../components/sass/_grid.scss */
 .col-9 {
   width: 74.5%;
 }
 
-/* line 94, ../components/sass/_grid.scss */
+/* line 89, ../components/sass/_grid.scss */
 .col-10 {
   width: 83%;
 }
 
-/* line 99, ../components/sass/_grid.scss */
+/* line 94, ../components/sass/_grid.scss */
 .col-11 {
   width: 91.5%;
 }
 
-/* line 104, ../components/sass/_grid.scss */
+/* line 99, ../components/sass/_grid.scss */
 .col-12 {
   width: 100%;
 }
 
 /* Clearfix
 ==================================== */
-/* line 112, ../components/sass/_grid.scss */
+/* line 107, ../components/sass/_grid.scss */
 .group:after, .grid:after {
   content: "";
   display: table;
@@ -414,12 +407,12 @@ body .container .main {
 }
 
 /* line 14, ../components/sass/_mixins.scss */
-.gallery li p a, .main .personal_statement p a {
+.main .personal_statement p a, .gallery li p a {
   text-decoration: none;
   color: #575C61;
 }
 /* line 17, ../components/sass/_mixins.scss */
-.gallery li p a:hover, .main .personal_statement p a:hover {
+.main .personal_statement p a:hover, .gallery li p a:hover {
   border-top: 2px solid #92999e;
   border-bottom: 2px solid #92999e;
 }
@@ -453,39 +446,40 @@ html {
   background: linear-gradient(rgba(200, 199, 204, 0.6), rgba(200, 199, 204, 0.85));
 }
 
-/* line 16, ../components/sass/_globals.scss */
-body {
+/* line 17, ../components/sass/_globals.scss */
+body, html {
+  height: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* line 22, ../components/sass/_globals.scss */
+/* line 24, ../components/sass/_globals.scss */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6em;
   max-width: 1200px;
 }
 @media only screen and (min-width: 960px) {
-  /* line 22, ../components/sass/_globals.scss */
+  /* line 24, ../components/sass/_globals.scss */
   body {
     width: 960px;
     margin: 0 auto;
   }
 }
-/* line 30, ../components/sass/_globals.scss */
+/* line 32, ../components/sass/_globals.scss */
 body .container {
   position: relative;
   min-height: 100%;
   width: 100%;
   margin: auto;
 }
-/* line 36, ../components/sass/_globals.scss */
+/* line 38, ../components/sass/_globals.scss */
 body .container .main {
   padding-bottom: 96px;
   margin: 2%;
 }
-/* line 42, ../components/sass/_globals.scss */
+/* line 44, ../components/sass/_globals.scss */
 body .container footer {
   position: absolute;
   bottom: 0;
@@ -496,28 +490,28 @@ body .container footer {
   text-align: center;
   color: #737878;
 }
-/* line 52, ../components/sass/_globals.scss */
+/* line 54, ../components/sass/_globals.scss */
 body .container footer .social-icon {
   width: 24px;
   height: 24px;
   margin: 0 6px;
 }
-/* line 58, ../components/sass/_globals.scss */
+/* line 60, ../components/sass/_globals.scss */
 body .container footer p {
   margin: 0 auto;
 }
 
-/* line 65, ../components/sass/_globals.scss */
+/* line 67, ../components/sass/_globals.scss */
 a {
   text-decoration: none;
 }
 
-/* line 69, ../components/sass/_globals.scss */
+/* line 71, ../components/sass/_globals.scss */
 img {
   max-width: 100%;
 }
 
-/* line 73, ../components/sass/_globals.scss */
+/* line 75, ../components/sass/_globals.scss */
 h3 {
   margin: 0 0 1em 0;
 }
@@ -525,18 +519,18 @@ h3 {
 /***********************************************
 COLORS
 ***********************************************/
-/* line 93, ../components/sass/_globals.scss */
+/* line 95, ../components/sass/_globals.scss */
 body p {
   color: #626893;
 }
 
-/* line 100, ../components/sass/_globals.scss */
+/* line 102, ../components/sass/_globals.scss */
 .calendar, .photo {
   background: url("../images/background/cream_dust_@2X.png");
 }
 
 /* logo text*/
-/* line 107, ../components/sass/_globals.scss */
+/* line 109, ../components/sass/_globals.scss */
 a {
   text-decoration: none;
 }
@@ -676,80 +670,30 @@ header nav li a {
   background: #00e1da;
 }
 
-/***********************************************
-PAGE: PORTFOLIO
-***********************************************/
-/* line 4, ../components/sass/_portfolio.scss */
-.galleryIntro {
-  margin-bottom: 24px;
-}
-/* line 6, ../components/sass/_portfolio.scss */
-.galleryIntro p {
-  margin: 0 auto;
-  width: 80%;
-}
-
-/* line 11, ../components/sass/_portfolio.scss */
-.gallery {
+/* line 2, ../components/sass/_portfolio.scss */
+.portfolio {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
-/* line 15, ../components/sass/_portfolio.scss */
-.gallery li {
-  float: left;
-  background-color: transparent;
-}
-/* line 19, ../components/sass/_portfolio.scss */
-.gallery li:nth-child(even) {
-  margin-left: 2%;
-}
-/* line 22, ../components/sass/_portfolio.scss */
-.gallery li img {
-  width: inherit;
-  margin: 0 auto;
-  padding: 0;
-  border-radius: 2px;
+/* line 5, ../components/sass/_portfolio.scss */
+.portfolio li {
   display: inline-block;
+  background: pink;
 }
-/* line 29, ../components/sass/_portfolio.scss */
-.gallery li p {
+/* line 8, ../components/sass/_portfolio.scss */
+.portfolio li:nth-child(2n+2) {
+  float: right;
+  margin-right: 0;
+}
+/* line 12, ../components/sass/_portfolio.scss */
+.portfolio li a {
+  display: block;
   margin: 0;
-  padding: 6px 4px 12px;
-  font-size: .75em;
-  text-align: center;
-  height: 82px;
-  color: #555b80;
-  background: linear-gradient(rgba(248, 255, 217, 0.3), rgba(248, 255, 217, 0.5));
+  padding: 0;
 }
-@media (min-width: 434px) {
-  /* line 29, ../components/sass/_portfolio.scss */
-  .gallery li p {
-    height: 52px;
-  }
-}
-@media (min-width: 815px) {
-  /* line 29, ../components/sass/_portfolio.scss */
-  .gallery li p {
-    height: 33px;
-  }
-}
-
-/* line 49, ../components/sass/_portfolio.scss */
-.overlay {
-  background: rgba(76, 104, 143, 0.5);
+/* line 16, ../components/sass/_portfolio.scss */
+.portfolio li a img {
   width: 100%;
-  height: 135%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  text-align: center;
-}
-/* line 58, ../components/sass/_portfolio.scss */
-.overlay img {
-  margin-top: 25%;
-  width: 60%;
 }
 
 /* line 2, ../components/sass/_about.scss */
@@ -940,4 +884,80 @@ PAGE: PORTFOLIO
   height: 12px;
   padding: 12px;
   margin: 0px auto;
+}
+
+/***********************************************
+PAGE: PORTFOLIO
+***********************************************/
+/* line 4, ../components/sass/_woodwork.scss */
+.galleryIntro {
+  margin-bottom: 24px;
+}
+/* line 6, ../components/sass/_woodwork.scss */
+.galleryIntro p {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* line 11, ../components/sass/_woodwork.scss */
+.gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 15, ../components/sass/_woodwork.scss */
+.gallery li {
+  float: left;
+  background-color: transparent;
+}
+/* line 19, ../components/sass/_woodwork.scss */
+.gallery li:nth-child(even) {
+  margin-left: 2%;
+}
+/* line 22, ../components/sass/_woodwork.scss */
+.gallery li img {
+  width: inherit;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 2px;
+  display: inline-block;
+}
+/* line 29, ../components/sass/_woodwork.scss */
+.gallery li p {
+  margin: 0;
+  padding: 6px 4px 12px;
+  font-size: .75em;
+  text-align: center;
+  height: 82px;
+  color: #555b80;
+  background: linear-gradient(rgba(248, 255, 217, 0.3), rgba(248, 255, 217, 0.5));
+}
+@media (min-width: 434px) {
+  /* line 29, ../components/sass/_woodwork.scss */
+  .gallery li p {
+    height: 52px;
+  }
+}
+@media (min-width: 815px) {
+  /* line 29, ../components/sass/_woodwork.scss */
+  .gallery li p {
+    height: 33px;
+  }
+}
+
+/* line 49, ../components/sass/_woodwork.scss */
+.overlay {
+  background: rgba(76, 104, 143, 0.5);
+  width: 100%;
+  height: 135%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+}
+/* line 58, ../components/sass/_woodwork.scss */
+.overlay img {
+  margin-top: 25%;
+  width: 60%;
 }

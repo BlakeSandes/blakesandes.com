@@ -1,64 +1,22 @@
-/***********************************************
-PAGE: PORTFOLIO
-***********************************************/
-.galleryIntro {
-  margin-bottom: 24px;
-  p {
-    margin: 0 auto;
-    width: 80%;
-  }
-}
-.gallery {
+
+.portfolio {
   margin: 0;
-  padding: 0;
-  list-style: none;
+  padding: 0; 
   li {
-    float: left;
-    background-color: transparent;
-    
-    &:nth-child(even) {
-      margin-left: 2%;
-    }
+  display: inline-block;
+  background: pink;
+  &:nth-child(2n+2) {
+    float: right;
+    margin-right: 0;
+  }
+  a {
+    display: block;
+    margin: 0;
+    padding: 0;
     img {
-      width: inherit;
-      margin: 0 auto;
-      padding: 0;
-      border-radius: 2px;
-      display: inline-block;
+      width: 100%;
     }
-    p {
-      margin: 0;
-      padding: 6px 4px 12px;
-      font-size: .75em;
-      text-align: center;
-      height: 82px;
-      @media (min-width: 434px) {
-        height: 52px;
-      }
-      @media (min-width: 815px) {
-        height: 33px;
-      }
-      color: darken($navColor, 14%);
-      background: $paraBG;
-      @extend %link;
-    }
-  }
-  
-}
-
-.overlay {
-  background: rgba(76,104,143, 0.5);
-  width: 100%;
-  height: 135%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  text-align: center;
-  img {
-    margin-top: 25%;
-    width: 60%;
   }
 }
 
-
+}
