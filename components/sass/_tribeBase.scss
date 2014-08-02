@@ -4,18 +4,22 @@
   box-sizing: border-box;
 }
 
-form * {
-  background: transparent;
-}
+
 
 html {
-  background: -webkit-linear-gradient(rgba(217,235,255,.75), rgba(138,145,158,.75));
-  background: -o-linear-gradient(rgba(217,235,255,.75), rgba(138,145,158,.75));
   background: linear-gradient(rgba(217,235,255,.75), rgba(138,145,158,.75));
   box-shadow: inset 6px 12px 48px rgba(138,145,158,.75), 
               inset -6px 0 48px rgba(138,145,158,.75);
 }
 
+body {
+  margin: 0 auto;
+}
+
+
+form * {
+  background: transparent;
+}
 
 /*============CLEAR DEFAULT INPUT STYLES============*/
 

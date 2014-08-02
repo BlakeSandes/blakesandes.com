@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="css/main.css" >
 	</head>
 	<body>
-		<div class="container">
+		<div class="grid container">
 			<header>
 				<a href="index.html" class="logo">	
 					<h1>Blake Wilson</h1>
@@ -21,11 +21,26 @@
 					</ul>
 				</nav>
 			</header>
-			<ul class="grid portfolio main">
-				<li class="col-4 woodwork"><a href="woodwork.html"><img src="../images/gallery-4/harder_trellis1.jpg"></a></li>
-				<li class="col-4 flightPicker"><a href="flights.html">Flights</a></li>
-				<li class="col-4 tribeForm"><a href="tribes.html">Twelve Tribes</a></li>
-			</ul>
+			<div class="grid portfolio main">
+				<div class="col-4 woodwork">
+					<ul>
+						<li><img src="../images/gallery-4/harder_trellis1.jpg"></li>
+						<li><a href="woodwork.html">A photo gallery of woodworking projects I have built through the years.</a></li>
+					</ul>
+				</div>
+				<div class="col-4 woodwork">
+					<ul>
+						<li><img src="../images/flights.jpg"></li>
+						<li><a href="flights.html">A simple flight sales form with CSS3 with Sass and jQuery.</a></li>
+					</ul>
+				</div>
+				<div class="col-4 woodwork">
+					<ul>
+						<li><img src="../images/tribes.jpg"></li>
+						<li><a href="tribes.html">A form I did with more detailed CSS3 and Sass styling and jQuery.</a></li>
+					</ul>
+				</div>
+			</div>
 			
 			<footer>
 				<a href="http://twitter.com/blakesandes"><img src="images/icons/twitter-icon-9.png" alt="twitter logo" class="social-icon"></a>

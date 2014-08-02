@@ -455,22 +455,27 @@ $inputLinear: linear-gradient(rgba(255, 255, 255,.90) 40%, rgba(255, 255, 255,.6
           box-sizing: border-box;
 }
 
-/* line 7, ../components/sass/_tribeBase.scss */
-form * {
-  background: transparent;
-}
-
-/* line 11, ../components/sass/_tribeBase.scss */
+/* line 9, ../components/sass/_tribeBase.scss */
 html {
-  background: -webkit-linear-gradient(rgba(217, 235, 255, 0.75), rgba(138, 145, 158, 0.75));
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 235, 255, 0.75)), to(rgba(138, 145, 158, 0.75)));
+  background: -webkit-linear-gradient(rgba(217, 235, 255, 0.75), rgba(138, 145, 158, 0.75));
   background: linear-gradient(rgba(217, 235, 255, 0.75), rgba(138, 145, 158, 0.75));
   -webkit-box-shadow: inset 6px 12px 48px rgba(138, 145, 158, 0.75), inset -6px 0 48px rgba(138, 145, 158, 0.75);
           box-shadow: inset 6px 12px 48px rgba(138, 145, 158, 0.75), inset -6px 0 48px rgba(138, 145, 158, 0.75);
 }
 
+/* line 15, ../components/sass/_tribeBase.scss */
+body {
+  margin: 0 auto;
+}
+
+/* line 20, ../components/sass/_tribeBase.scss */
+form * {
+  background: transparent;
+}
+
 /*============CLEAR DEFAULT INPUT STYLES============*/
-/* line 22, ../components/sass/_tribeBase.scss */
+/* line 26, ../components/sass/_tribeBase.scss */
 input[type=text], input[type=email], input[type=password],
 input[type=url], input[type=tel],
 textarea, button, select {

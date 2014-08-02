@@ -1,28 +1,51 @@
 
 .portfolio {
-  margin: 0;
-  padding: 0; 
-  li {
-    display: inline-block;
-    height: 124px;
-    
-    &:nth-child(3n+1) {
-      background: rgba(11,177,186, .60);
-    }
-    &:nth-child(3n+2) {
+  
+  div {
+    position: relative;
+    &:nth-child(3n+3) {
       float: right;
       margin-right: 0;
-      background: rgba(194,139,90, .60);
     }
-    &:nth-child(3n+3) {
-      background: rgba(115,65,185, .60);
-    }
-    a {
-      display: block;
+    ul {
       margin: 0;
       padding: 0;
-      img {
-        width: 100%;
+      display: block;
+      list-style: none;
+      li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        box-shadow: 0 0 1px black;
+        &:last-child {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: auto;
+          width: 100%;
+          background: rgba(64,64,64, .6);
+          a {
+            height: 100%;
+            color: white;
+            text-shadow: 0 0 1px black;
+            text-align: center;
+            padding: 4% 12px 0;
+            font-size: .85em;
+            line-height: 1.3em;
+            @media (min-width: 470px) {
+              font-size: 1rem;
+              line-height: 1.3em;
+              padding-top: 8%;
+            }
+            @media (min-width: 620px) {
+              font-size: 1.1em;
+              line-height: 1.6em;
+            }
+          }
+        }
+        a {
+          display: block;
+        }
       }
     }
   }
