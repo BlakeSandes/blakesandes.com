@@ -13,8 +13,7 @@ PAGE: PORTFOLIO
   padding: 0;
   list-style: none;
   li {
-    background-color: transparent;
-    
+    position: relative;
     &:nth-child(even) {
       margin-right: 0;
     }
@@ -41,23 +40,34 @@ PAGE: PORTFOLIO
       background: $paraBG;
       @extend %link;
     }
+    .overlay {
+      position: absolute;
+      z-index: 100;
+      background: rgba(0,0,0, .6);
+      width: 204%;
+      top: -4em;
+      left: 0;
+      text-align: center;
+      
+
+      border-radius: 2px;
+      img {
+        padding: 8% 12% 12%;
+
+      }
+    }
+    .overlayEven {
+      left: 0%;
+    }
+    .overlayOdd {
+      left: -104%; 
+    }     
   }
+
+  
   
 }
 
-.overlay {
-  background: rgba(76,104,143, 0.5);
-  width: 100%;
-  height: 135%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  text-align: center;
-  img {
-    margin-top: 25%;
-    width: 60%;
-  }
-}
+
 
 
