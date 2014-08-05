@@ -9,6 +9,7 @@ PAGE: PORTFOLIO
   }
 }
 .gallery {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -43,21 +44,64 @@ PAGE: PORTFOLIO
     .overlay {
       position: absolute;
       z-index: 100;
-      background: rgba(0,0,0, .86);
+      background: rgba(0,0,0, .76);
       width: 204.5%;
       top: -4em;
-      left: 0;
       text-align: center;
-      p {
-        line-height: 1.6em;
-        font-size: 1rem;
-        color: darken($navColor, 36%);
-      }
-
       border-radius: 2px;
+      
       img {
-        padding: 8% 12% 12%;
-
+        padding: 6% 7% 6%;
+        border-radius: 2px;
+      }
+      .left,.right,.close,.top {
+        position: absolute;
+        width: 6.5%;
+        color: rgba(255,255,255, .8);
+        background: rgba(127,127,127, .3);
+        &:hover {
+          cursor: pointer;
+          background: rgba(127,127,127, .6);
+          color: rgba(255,255,255, 1);
+        }
+      }
+      .left, .right {
+        top: 7.75%;
+        height: 83%;
+        padding-top: 32%;
+      }
+      .left {
+        left: .25%;
+      }
+      .right {
+        right: .25%;
+      }
+      .close, .top {
+        
+        left: .25%;
+        width: 99.5%;
+        
+        padding-top: 1%;
+      } 
+      .top {
+        top: .25%;
+        height: 7.25%;
+      }
+      .close {
+        bottom: .25%;
+        height: 8.75%;
+      }
+      .caption {
+        position: absolute;
+        bottom: -10.5%;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        p {
+          line-height: 1.6em;
+          font-size: 1rem;
+          color: darken($navColor, 36%);
+        }
       }
     }
     .overlayEven {
@@ -67,6 +111,7 @@ PAGE: PORTFOLIO
       left: -104.25%; 
     }     
   }
+  
 
   
   

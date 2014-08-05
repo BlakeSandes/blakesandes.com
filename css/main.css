@@ -445,12 +445,11 @@ GENERAL
 /* line 12, ../components/sass/_mainGlobals.scss */
 html {
   min-height: 100%;
-  height: 100%;
   background: linear-gradient(rgba(217, 235, 255, 0.75), rgba(138, 145, 158, 0.75));
   box-shadow: inset 6px 12px 48px rgba(138, 145, 158, 0.75), inset -6px 0 48px rgba(138, 145, 158, 0.75);
 }
 
-/* line 27, ../components/sass/_mainGlobals.scss */
+/* line 22, ../components/sass/_mainGlobals.scss */
 body {
   height: 100%;
   min-height: 100%;
@@ -460,25 +459,25 @@ body {
   font-family: Arial, sans-serif;
 }
 @media only screen and (min-width: 960px) {
-  /* line 27, ../components/sass/_mainGlobals.scss */
+  /* line 22, ../components/sass/_mainGlobals.scss */
   body {
     width: 960px;
     margin: 0 auto;
   }
 }
-/* line 38, ../components/sass/_mainGlobals.scss */
+/* line 33, ../components/sass/_mainGlobals.scss */
 body .container {
   position: relative;
   min-height: 100%;
   width: 100%;
   margin: 0 auto;
 }
-/* line 44, ../components/sass/_mainGlobals.scss */
+/* line 39, ../components/sass/_mainGlobals.scss */
 body .container .main {
   padding-bottom: 96px;
   margin: 2%;
 }
-/* line 50, ../components/sass/_mainGlobals.scss */
+/* line 45, ../components/sass/_mainGlobals.scss */
 body .container footer {
   position: absolute;
   bottom: 0;
@@ -489,29 +488,29 @@ body .container footer {
   text-align: center;
   color: #737878;
 }
-/* line 61, ../components/sass/_mainGlobals.scss */
+/* line 56, ../components/sass/_mainGlobals.scss */
 body .container footer .social-icon {
   width: 24px;
   height: 24px;
   margin: 0 6px;
 }
 
-/* line 71, ../components/sass/_mainGlobals.scss */
+/* line 66, ../components/sass/_mainGlobals.scss */
 a {
   text-decoration: none;
 }
 
-/* line 75, ../components/sass/_mainGlobals.scss */
+/* line 70, ../components/sass/_mainGlobals.scss */
 img {
   max-width: 100%;
 }
 
-/* line 79, ../components/sass/_mainGlobals.scss */
+/* line 74, ../components/sass/_mainGlobals.scss */
 h3 {
   margin: 0 0 1em 0;
 }
 
-/* line 86, ../components/sass/_mainGlobals.scss */
+/* line 81, ../components/sass/_mainGlobals.scss */
 .calendar, .photo {
   background: url("../images/background/cream_dust_@2X.png");
 }
@@ -924,19 +923,20 @@ PAGE: PORTFOLIO
 
 /* line 11, ../components/sass/_woodwork.scss */
 .gallery {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 15, ../components/sass/_woodwork.scss */
+/* line 16, ../components/sass/_woodwork.scss */
 .gallery li {
   position: relative;
 }
-/* line 17, ../components/sass/_woodwork.scss */
+/* line 18, ../components/sass/_woodwork.scss */
 .gallery li:nth-child(even) {
   margin-right: 0;
 }
-/* line 20, ../components/sass/_woodwork.scss */
+/* line 21, ../components/sass/_woodwork.scss */
 .gallery li img {
   width: inherit;
   margin: 0 auto;
@@ -944,7 +944,7 @@ PAGE: PORTFOLIO
   border-radius: 2px;
   display: inline-block;
 }
-/* line 27, ../components/sass/_woodwork.scss */
+/* line 28, ../components/sass/_woodwork.scss */
 .gallery li p {
   margin: 0;
   padding: 6px 4px 12px;
@@ -955,43 +955,94 @@ PAGE: PORTFOLIO
   background: linear-gradient(rgba(248, 255, 217, 0.3), rgba(248, 255, 217, 0.5));
 }
 @media (min-width: 434px) {
-  /* line 27, ../components/sass/_woodwork.scss */
+  /* line 28, ../components/sass/_woodwork.scss */
   .gallery li p {
     height: 52px;
   }
 }
 @media (min-width: 815px) {
-  /* line 27, ../components/sass/_woodwork.scss */
+  /* line 28, ../components/sass/_woodwork.scss */
   .gallery li p {
     height: 33px;
   }
 }
-/* line 43, ../components/sass/_woodwork.scss */
+/* line 44, ../components/sass/_woodwork.scss */
 .gallery li .overlay {
   position: absolute;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.86);
+  background: rgba(0, 0, 0, 0.76);
   width: 204.5%;
   top: -4em;
-  left: 0;
   text-align: center;
   border-radius: 2px;
 }
-/* line 51, ../components/sass/_woodwork.scss */
-.gallery li .overlay p {
+/* line 53, ../components/sass/_woodwork.scss */
+.gallery li .overlay img {
+  padding: 6% 7% 6%;
+  border-radius: 2px;
+}
+/* line 57, ../components/sass/_woodwork.scss */
+.gallery li .overlay .left, .gallery li .overlay .right, .gallery li .overlay .close, .gallery li .overlay .top {
+  position: absolute;
+  width: 6.5%;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(127, 127, 127, 0.3);
+}
+/* line 62, ../components/sass/_woodwork.scss */
+.gallery li .overlay .left:hover, .gallery li .overlay .right:hover, .gallery li .overlay .close:hover, .gallery li .overlay .top:hover {
+  cursor: pointer;
+  background: rgba(127, 127, 127, 0.6);
+  color: white;
+}
+/* line 68, ../components/sass/_woodwork.scss */
+.gallery li .overlay .left, .gallery li .overlay .right {
+  top: 7.75%;
+  height: 83%;
+  padding-top: 32%;
+}
+/* line 73, ../components/sass/_woodwork.scss */
+.gallery li .overlay .left {
+  left: .25%;
+}
+/* line 76, ../components/sass/_woodwork.scss */
+.gallery li .overlay .right {
+  right: .25%;
+}
+/* line 79, ../components/sass/_woodwork.scss */
+.gallery li .overlay .close, .gallery li .overlay .top {
+  left: .25%;
+  width: 99.5%;
+  padding-top: 1%;
+}
+/* line 86, ../components/sass/_woodwork.scss */
+.gallery li .overlay .top {
+  top: .25%;
+  height: 7.25%;
+}
+/* line 90, ../components/sass/_woodwork.scss */
+.gallery li .overlay .close {
+  bottom: .25%;
+  height: 8.75%;
+}
+/* line 94, ../components/sass/_woodwork.scss */
+.gallery li .overlay .caption {
+  position: absolute;
+  bottom: -10.5%;
+  left: 0;
+  width: 100%;
+  height: 10%;
+}
+/* line 100, ../components/sass/_woodwork.scss */
+.gallery li .overlay .caption p {
   line-height: 1.6em;
   font-size: 1rem;
   color: #292b3d;
 }
-/* line 58, ../components/sass/_woodwork.scss */
-.gallery li .overlay img {
-  padding: 8% 12% 12%;
-}
-/* line 63, ../components/sass/_woodwork.scss */
+/* line 107, ../components/sass/_woodwork.scss */
 .gallery li .overlayEven {
   left: -.25%;
 }
-/* line 66, ../components/sass/_woodwork.scss */
+/* line 110, ../components/sass/_woodwork.scss */
 .gallery li .overlayOdd {
   left: -104.25%;
 }
