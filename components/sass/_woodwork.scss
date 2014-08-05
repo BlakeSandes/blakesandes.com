@@ -43,12 +43,16 @@ PAGE: PORTFOLIO
     .overlay {
       position: absolute;
       z-index: 100;
-      background: rgba(0,0,0, .6);
-      width: 204%;
+      background: rgba(0,0,0, .86);
+      width: 204.5%;
       top: -4em;
       left: 0;
       text-align: center;
-      
+      p {
+        line-height: 1.6em;
+        font-size: 1rem;
+        color: darken($navColor, 36%);
+      }
 
       border-radius: 2px;
       img {
@@ -57,10 +61,10 @@ PAGE: PORTFOLIO
       }
     }
     .overlayEven {
-      left: 0%;
+      left: -.25%;
     }
     .overlayOdd {
-      left: -104%; 
+      left: -104.25%; 
     }     
   }
 

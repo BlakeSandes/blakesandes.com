@@ -522,7 +522,7 @@ HEADER
 /* line 5, ../components/sass/_mainNav.scss */
 header {
   position: relative;
-  margin: 0 auto;
+  margin: 1em auto 0;
   width: 100%;
   height: 120px;
   background: linear-gradient(to bottom, #72aad6, #82b9ff);
@@ -970,22 +970,28 @@ PAGE: PORTFOLIO
 .gallery li .overlay {
   position: absolute;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.6);
-  width: 204%;
+  background: rgba(0, 0, 0, 0.86);
+  width: 204.5%;
   top: -4em;
   left: 0;
   text-align: center;
   border-radius: 2px;
 }
-/* line 54, ../components/sass/_woodwork.scss */
+/* line 51, ../components/sass/_woodwork.scss */
+.gallery li .overlay p {
+  line-height: 1.6em;
+  font-size: 1rem;
+  color: #292b3d;
+}
+/* line 58, ../components/sass/_woodwork.scss */
 .gallery li .overlay img {
   padding: 8% 12% 12%;
 }
-/* line 59, ../components/sass/_woodwork.scss */
+/* line 63, ../components/sass/_woodwork.scss */
 .gallery li .overlayEven {
-  left: 0%;
+  left: -.25%;
 }
-/* line 62, ../components/sass/_woodwork.scss */
+/* line 66, ../components/sass/_woodwork.scss */
 .gallery li .overlayOdd {
-  left: -104%;
+  left: -104.25%;
 }
