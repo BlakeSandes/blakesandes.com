@@ -7,14 +7,14 @@ $ = require('jquery');
 
 var $overlayEven = $('<div class="overlayEven overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">X</span></div>');
 var $overlayOdd = $('<div class="overlayOdd overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">X</span></div>');
-
+var $overlayImageEven = $('<img>');
+var $overlayImageOdd = $('<img>');
 
 //Capture the click event on a link to an image in the even(left side) row.
 
 $(".gallery li:even" ).on( "click", "a:not([href^='http'])", function(event) {
   event.preventDefault();
   var $imageLocationEven = $(this).attr("href");
-  var $overlayImageEven = $('<img>');
   var $captionEven = $('<span class="caption"><p>Hey Even!</p></span>');
 
 
@@ -33,11 +33,10 @@ $(".gallery li:even" ).on( "click", "a:not([href^='http'])", function(event) {
 
 
 //Capture the click event on a link to an image in the even(left side) row.
-
 $(".gallery li:odd").on("click", "a:not([href^='http'])", function(event) {
   event.preventDefault();
   var $imageLocationOdd = $(this).attr("href");
-  var $overlayImageOdd = $('<img>');
+  
   var $captionOdd = $('<span class="caption"><p>Hey Odd!</p></span>');
 
   
@@ -64,8 +63,24 @@ $overlayEven.on("click", ".close", function(){
 
 $overlayOdd.on("click", ".close", function(){
   //Hide overlay.
-  $(this).closest("div").remove();
+  $(this).closest("div").fadeOut();
 });
+
+
+
+//////Clicking through the photo galleries.
+
+
+var gallery1 = ["1_1.jpg", "1_2.jpg", "luka_bed.jpg"];
+
+
+
+
+
+
+
+
+
 
 
 

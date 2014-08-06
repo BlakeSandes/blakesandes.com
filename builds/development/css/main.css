@@ -1010,19 +1010,19 @@ PAGE: PORTFOLIO
 .gallery li .overlay .left, .gallery li .overlay .right, .gallery li .overlay .close, .gallery li .overlay .top {
   position: absolute;
   width: 6.5%;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.4);
   background: rgba(127, 127, 127, 0.3);
 }
 /* line 62, ../components/sass/_woodwork.scss */
 .gallery li .overlay .left:hover, .gallery li .overlay .right:hover, .gallery li .overlay .close:hover, .gallery li .overlay .top:hover {
   cursor: pointer;
   background: rgba(127, 127, 127, 0.6);
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
 }
 /* line 68, ../components/sass/_woodwork.scss */
 .gallery li .overlay .left, .gallery li .overlay .right {
   top: 7.75%;
-  height: 83%;
+  height: 83.5%;
   padding-top: 32%;
 }
 /* line 73, ../components/sass/_woodwork.scss */
@@ -1047,7 +1047,7 @@ PAGE: PORTFOLIO
 /* line 90, ../components/sass/_woodwork.scss */
 .gallery li .overlay .close {
   bottom: .25%;
-  height: 8.75%;
+  height: 8.25%;
 }
 /* line 94, ../components/sass/_woodwork.scss */
 .gallery li .overlay .caption {

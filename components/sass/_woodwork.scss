@@ -57,17 +57,17 @@ PAGE: PORTFOLIO
       .left,.right,.close,.top {
         position: absolute;
         width: 6.5%;
-        color: rgba(255,255,255, .8);
+        color: rgba(255,255,255, .4);
         background: rgba(127,127,127, .3);
         &:hover {
           cursor: pointer;
           background: rgba(127,127,127, .6);
-          color: rgba(255,255,255, 1);
+          color: rgba(255,255,255, .8);
         }
       }
       .left, .right {
         top: 7.75%;
-        height: 83%;
+        height: 83.5%;
         padding-top: 32%;
       }
       .left {
@@ -89,7 +89,7 @@ PAGE: PORTFOLIO
       }
       .close {
         bottom: .25%;
-        height: 8.75%;
+        height: 8.25%;
       }
       .caption {
         position: absolute;
