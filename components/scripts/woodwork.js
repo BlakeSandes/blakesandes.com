@@ -5,8 +5,8 @@ $ = require('jquery');
 
 //////Create an overlay with a large image for the gallery.//////
 
-var $overlayEven = $('<div class="overlayEven overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">X</span></div>');
-var $overlayOdd = $('<div class="overlayOdd overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">X</span></div>');
+var $overlayEven = $('<div class="overlayEven overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">x</span></div>');
+var $overlayOdd = $('<div class="overlayOdd overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">x</span></div>');
 var $overlayImageEven = $('<img>');
 var $overlayImageOdd = $('<img>');
 
@@ -24,7 +24,7 @@ $(".gallery li:even" ).on( "click", "a:not([href^='http'])", function(event) {
   $overlayEven.append($captionEven);
 
   //Append $overlayEven to its relative image in the gallery.
-  $(this).closest("li").append($overlayEven);
+  $(this).closest("li").append($overlayEven).siblings().find($overlayEven).fadeOut("slow");
 
   //Fade in the $overlayEven div.
   $overlayEven.fadeIn(100);
@@ -46,7 +46,7 @@ $(".gallery li:odd").on("click", "a:not([href^='http'])", function(event) {
   $overlayOdd.append($captionOdd);
 
      //Append $overlayOdd to its relative image in the gallery.
-  $(this).closest("li").append($overlayOdd);
+  $(this).closest("li").append($overlayOdd).siblings().find($overlayOdd).fadeOut("slow");
 
   //Fade in the $overlayOdd div.
   $overlayOdd.fadeIn(100);
@@ -54,7 +54,7 @@ $(".gallery li:odd").on("click", "a:not([href^='http'])", function(event) {
 });
 
    
-//Closing the overlay.
+//Closing the overlays.
 
 $overlayEven.on("click", ".close", function(){
   //Hide overlay.
@@ -70,8 +70,7 @@ $overlayOdd.on("click", ".close", function(){
 
 //////Clicking through the photo galleries.
 
-
-var gallery1 = ["1_1.jpg", "1_2.jpg", "luka_bed.jpg"];
+var gallery1 = ["../images/gallery-1/1_1.jpg", "../images/gallery-1/1_2.jpg", "../images/gallery-1/luka_bed.jpg"];
 
 
 

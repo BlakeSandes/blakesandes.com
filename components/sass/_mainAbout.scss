@@ -1,10 +1,11 @@
 
 .about {
+  margin: 2%;
   p {
     color: darken($navColor, 8%);
-    padding: 0 6px;
+    padding: 6px 6px;
   }
-  margin: 2%;
+  
   .purpose_statement {
     float: left;
     background: $sectionBG;
