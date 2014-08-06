@@ -8,124 +8,134 @@ PAGE: PORTFOLIO
     width: 80%;
   }
 }
-.gallery {
+
+.gallery-container {
   position: relative;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  li {
-    position: relative;
-    &:nth-child(even) {
-      margin-right: 0;
-    }
-    img {
-      width: inherit;
-      margin: 0 auto;
-      padding: 0;
-      border-radius: 2px;
-      display: inline-block;
-    }
-    p {
-      margin: 0;
-      padding: 6px 4px 12px;
-      font-size: .75em;
-      text-align: center;
-      height: 82px;
-      @media (min-width: 434px) {
-        height: 52px;
+  
+  .gallery {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      &:nth-child(even) {
+        margin-right: 0;
       }
-      @media (min-width: 815px) {
-        height: 33px;
+      a {
+        &:not(:first-child) {
+          display: none;
+        } 
       }
-      color: darken($navColor, 14%);
-      background: $paraBG;
-      @extend %link;
-    }
-    .overlay {
-      position: absolute;
-      z-index: 100;
-      background: rgba(0,0,0, .85);
-      width: 204.5%;
-      top: -4em;
-      text-align: center;
-      border-radius: 2px;
+      p {
+        &:not(:nth-child(2)) {
+          display: none;
+        }
+      }
       
       img {
-        padding: 6% 7%;
-        border: .15em solid black;
+        width: inherit;
+        margin: 0 auto;
+        padding: 0;
+        border-radius: 2px;
+        display: inline-block;
       }
-      .left,.right,.close,.top {
-        position: absolute;
-        color: rgba(255,255,255, .4);
-        background: rgba(127,127,127, .3);
-        font-size: 2.4em;
-        &:hover {
-          cursor: pointer;
-          background: rgba(127,127,127, .6);
-          color: rgba(255,255,255, .8);
+      p {
+        margin: 0;
+        padding: 6px 4px 12px;
+        font-size: .75em;
+        text-align: center;
+        height: 82px;
+        @media (min-width: 434px) {
+          height: 52px;
         }
-      }
-      .left, .right {
-        top: 8%;
-        width: 7%;
-        height: 82%;
-        padding-top: 32%;
-        @media (min-width: 580px) {
-          height: 83.10%;
+        @media (min-width: 815px) {
+          height: 33px;
         }
-        @media (min-width: 690px) {
-          height: 83.25%;
-        }
-      }
-      .left {
-        left: 0;
-      }
-      .right {
-        right: 0;
-      }
-      .close, .top {
-        left: 0;
-        width: 100%;
-      } 
-      .top {
-        top: 0;
-        height: 7.75%;
-      }
-      .close {
-        bottom: 0;
-        height: 9.75%;
-        @media (min-width: 580px) {
-          height: 9.05%;
-        }
-        @media (min-width: 690px) {
-          height: 8.85%;
-        }
-      }
-      .caption {
-        position: absolute;
-        bottom: -10.5%;
-        left: 0;
-        width: 100%;
-        height: 10%;
-        p {
-          line-height: 1.6em;
-          font-size: 1rem;
-          color: darken($navColor, 36%);
-        }
+        color: darken($navColor, 14%);
+        background: $paraBG;
+        @extend %link;
       }
     }
-    .overlayEven {
-      left: -.25%;
-    }
-    .overlayOdd {
-      left: -104.25%; 
-    }     
   }
-  
 
-  
-  
+  .overlay {
+    position: absolute;
+    z-index: 100;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    min-height: auto;
+    margin: 6px;
+    padding: 6%;
+    text-align: center;
+    
+    background: rgba(0,0,0, .85);
+    img {
+      padding: 6% 7%;
+      border: .15em solid black;
+    }
+
+    .left,.right,.close,.top {
+      position: absolute;
+      color: rgba(255,255,255, .4);
+      background: rgba(127,127,127, .3);
+      font-size: 2.4em;
+      &:hover {
+        cursor: pointer;
+        background: rgba(127,127,127, .6);
+        color: rgba(255,255,255, .8);
+      }
+    }
+    .left, .right {
+      top: 8%;
+      width: 7%;
+      height: 82%;
+      padding-top: 32%;
+      @media (min-width: 580px) {
+        height: 83.10%;
+      }
+      @media (min-width: 690px) {
+        height: 83.25%;
+      }
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      right: 0;
+    }
+    .close, .top {
+      left: 0;
+      width: 100%;
+    } 
+    .top {
+      top: 0;
+      height: 7.75%;
+    }
+    .close {
+      bottom: 0;
+      height: 9.75%;
+      @media (min-width: 580px) {
+        height: 9.05%;
+      }
+      @media (min-width: 690px) {
+        height: 8.85%;
+      }
+    }
+    .caption {
+      position: absolute;
+      bottom: -10.5%;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      p {
+        line-height: 1.6em;
+        font-size: 1rem;
+        color: darken($navColor, 36%);
+      }
+    }
+  } 
 }
+
 
 
 

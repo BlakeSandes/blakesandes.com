@@ -3,74 +3,62 @@ var $;
 $ = require('jquery');
 
 
-//////Create an overlay with a large image for the gallery.//////
-
-var $overlayEven = $('<div class="overlayEven overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">x</span></div>');
-var $overlayOdd = $('<div class="overlayOdd overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">x</span></div>');
-var $overlayImageEven = $('<img>');
-var $overlayImageOdd = $('<img>');
-
-//Capture the click event on a link to an image in the even(left side) row.
-
-$(".gallery li:even" ).on( "click", "a:not([href^='http'])", function(event) {
-  event.preventDefault();
-  var $imageLocationEven = $(this).attr("href");
-  var $captionEven = $('<span class="caption"><p>Hey Even!</p></span>');
-
-
-  //Set the image in the $overlay div to be from the gallery image src.
-  $overlayImageEven.attr("src", $imageLocationEven);
-  $overlayEven.append($overlayImageEven);
-  $overlayEven.append($captionEven);
-
-  //Append $overlayEven to its relative image in the gallery.
-  $(this).closest("li").append($overlayEven).siblings().find($overlayEven).fadeOut("slow");
-
-  //Fade in the $overlayEven div.
-  $overlayEven.fadeIn(100);
-
-});
-
-
-//Capture the click event on a link to an image in the even(left side) row.
-$(".gallery li:odd").on("click", "a:not([href^='http'])", function(event) {
-  event.preventDefault();
-  var $imageLocationOdd = $(this).attr("href");
-  
-  var $captionOdd = $('<span class="caption"><p>Hey Odd!</p></span>');
-
-  
-//Set the image in the $overlay div to be from the gallery image src.
-  $overlayImageOdd.attr("src", $imageLocationOdd);
-  $overlayOdd.append($overlayImageOdd);
-  $overlayOdd.append($captionOdd);
-
-     //Append $overlayOdd to its relative image in the gallery.
-  $(this).closest("li").append($overlayOdd).siblings().find($overlayOdd).fadeOut("slow");
-
-  //Fade in the $overlayOdd div.
-  $overlayOdd.fadeIn(100);
-
-});
-
-   
-//Closing the overlays.
-
-$overlayEven.on("click", ".close", function(){
-  //Hide overlay.
-  $(this).closest("div").fadeOut();
-});
-
-$overlayOdd.on("click", ".close", function(){
-  //Hide overlay.
-  $(this).closest("div").fadeOut();
-});
-
-
-
 //////Clicking through the photo galleries.
 
-var gallery1 = ["../images/gallery-1/1_1.jpg", "../images/gallery-1/1_2.jpg", "../images/gallery-1/luka_bed.jpg"];
+var galleryItems = $(".gallery li");
+var gallery_items = [];
+
+var gallery_int = 0;
+
+var $overlay = $('<div class="overlayEven overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">x</span></div>');
+var $overlayImage = $('<img>');
+var $caption = $('<p class="caption"></p>');
+
+galleryItems.each(function(node) {
+  
+  var node = $(this);
+  var imageLink = $(node).children("a");
+  var imageCaption = imageLink.siblings("p").html();
+  var imageContext = gallery_int;
+
+  gallery_items.push( {
+    imageURL: imageLink.attr("href"),
+    caption: imageCaption,
+    offsetTop: $(node).offset().top
+    }
+  );
+
+  // console.log(gallery_items);
+
+  imageLink.on("click", function (event) {
+    event.preventDefault();
+    console.log(gallery_items);
+    
+    //Set the image in the $overlay div to be from the gallery image src.
+    $overlayImage.attr("src", gallery_items[imageContext].imageURL);
+    $overlay.append($overlayImage);
+    $overlay.append($caption.html(gallery_items[imageContext].caption));
+
+    //Append $overlayEven to its relative image in the gallery.
+    $(this).closest("li").append($overlay).siblings().find($overlay).fadeOut("");
+
+    //Fade in the $overlayEven div.
+    $overlay.fadeIn(100);
+  });
+
+  gallery_int = gallery_int + 1;
+     
+});
+
+
+$overlay.on("click", ".close", function(){
+  //Hide overlay.
+  $(this).closest("div").fadeOut();
+});
+// console.log(gallery_items);
+
+
+
 
 
 
