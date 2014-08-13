@@ -304,57 +304,102 @@ $ = require('jquery');
 
 //////Clicking through the photo galleries.
 
-var galleryItems = $(".gallery li");
-var gallery_items = [];
+var galleryItems = $(".gallery ul li");
+var gallery_item = [];
+var gallery_index = 0;
 
-var gallery_int = 0;
 
-var $overlay = $('<div class="overlayEven overlay"><span class="top"></span><span class="left"><</span><span class="right">></span><span class="close">x</span></div>');
-var $overlayImage = $('<img>');
+var $lightBox = $('<div class="lightBox"></div>');
+var $imgBox = $('<div class="imgBox"><span class="left"><</span><span class="right">></span><span class="close">x</span></div')
+var $lightBoxImage = $('<img>');
 var $caption = $('<p class="caption"></p>');
 
 galleryItems.each(function(node) {
-  
   var node = $(this);
-  var imageLink = $(node).children("a");
+   // var parentListItem = $(node).children("li");
+  var imageLink = node.find('img');
   var imageCaption = imageLink.siblings("p").html();
-  var imageContext = gallery_int;
-
-  gallery_items.push( {
-    imageURL: imageLink.attr("href"),
+  var currentIndex = gallery_index;
+  
+  gallery_item.push( {
+    imageURL: imageLink.attr("src"),
     caption: imageCaption,
     offsetTop: $(node).offset().top
     }
   );
 
-  // console.log(gallery_items);
-
+  function createLightBox() {
+    $lightBoxImage.attr("src", gallery_item[currentIndex].imageURL);
+    $lightBox.append($imgBox);
+    $imgBox.append($lightBoxImage);
+    $lightBox.append($caption.html(gallery_item[currentIndex].caption)); 
+  }
+    
   imageLink.on("click", function (event) {
     event.preventDefault();
-    console.log(gallery_items);
+    var image = $(this);
+    var imageFamily = image.closest("ul").find("li");
+    imageFamily.last().css("border", "3px solid red").parent("ul").siblings().find(imageFamily).css("border", "none");
+    console.log("ul length is " +imageFamily.length);
+
+    //Set the image in the $lightBox div to be from the gallery image src.    
+    createLightBox();
+
+    //Append lightbox to its relative image in the gallery.
+    image.closest("ul").append($lightBox).siblings().find($lightBox).fadeOut("slow");
+    //Fade in the $lightBoxEven div.
+    $lightBox.fadeIn(100);
+    console.log("The parent ul index is " +currentIndex+ " and it has " +imageFamily.length+ " list items in it.");
     
-    //Set the image in the $overlay div to be from the gallery image src.
-    $overlayImage.attr("src", gallery_items[imageContext].imageURL);
-    $overlay.append($overlayImage);
-    $overlay.append($caption.html(gallery_items[imageContext].caption));
+    $lightBox.on("click", ".right", function(event) {
+        event.preventDefault();
+        
+      // if (currentIndex < imageFamily.length) {
+        createLightBox();
+        
+        image.closest("ul").append($lightBox).siblings().find($lightBox).fadeOut("slow");
+        
+        $lightBox.fadeIn(100);
+        
+        console.log("currentImage is " +currentIndex+ " Parent  is: " +imageFamily.length );
+        
+        currentIndex++
+      // } else {
+      //   currentImageInt = imageFamily.length - imageFamily.length;
+      // }
+    });
 
-    //Append $overlayEven to its relative image in the gallery.
-    $(this).closest("li").append($overlay).siblings().find($overlay).fadeOut("");
 
-    //Fade in the $overlayEven div.
-    $overlay.fadeIn(100);
+    $lightBox.on("click", ".left", function(event) {
+      event.preventDefault();
+
+      createLightBox();
+      
+      image.closest("ul").append($lightBox).siblings().find($lightBox).fadeOut("slow");
+      
+      $lightBox.fadeIn(100);
+      
+      console.log("currentImage is " +currentIndex+ " Parent length is: " +imageFamily.length );
+      
+      currentIndex--
+    });
+
+    $lightBox.on("click", ".close", function(){
+      //Hide lightBox.
+      $(this).closest($lightBox).fadeOut();
+    });
+
   });
+  
 
-  gallery_int = gallery_int + 1;
-     
+
+
+  gallery_index++;  
+  console.log("gallery_index: " + gallery_index);
+
 });
 
 
-$overlay.on("click", ".close", function(){
-  //Hide overlay.
-  $(this).closest("div").fadeOut();
-});
-// console.log(gallery_items);
 
 
 

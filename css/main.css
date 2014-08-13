@@ -408,12 +408,12 @@ body .container .main {
 }
 
 /* line 14, ../components/sass/_mainMixins.scss */
-.about .personal_statement p a, .gallery-container .gallery li p a {
+.about .personal_statement p a, .gallery ul li p a {
   text-decoration: none;
   color: #575C61;
 }
 /* line 17, ../components/sass/_mainMixins.scss */
-.about .personal_statement p a:hover, .gallery-container .gallery li p a:hover {
+.about .personal_statement p a:hover, .gallery ul li p a:hover {
   border-top: 2px solid #92999e;
   border-bottom: 2px solid #92999e;
 }
@@ -921,39 +921,48 @@ PAGE: PORTFOLIO
   width: 80%;
 }
 
-/* line 12, ../components/sass/_woodwork.scss */
-.gallery-container {
-  position: relative;
+/* line 13, ../components/sass/_woodwork.scss */
+.gallery {
+  margin: 0;
+  padding: 0;
 }
-/* line 15, ../components/sass/_woodwork.scss */
-.gallery-container .gallery {
+/* line 16, ../components/sass/_woodwork.scss */
+.gallery ul {
+  display: inline-block;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 20, ../components/sass/_woodwork.scss */
-.gallery-container .gallery li:nth-child(even) {
+/* line 21, ../components/sass/_woodwork.scss */
+.gallery ul:nth-child(even) {
+  float: right;
   margin-right: 0;
 }
-/* line 24, ../components/sass/_woodwork.scss */
-.gallery-container .gallery li a:not(:first-child) {
-  display: none;
+/* line 25, ../components/sass/_woodwork.scss */
+.gallery ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 /* line 29, ../components/sass/_woodwork.scss */
-.gallery-container .gallery li p:not(:nth-child(2)) {
+.gallery ul li:hover {
+  cursor: pointer;
+}
+/* line 32, ../components/sass/_woodwork.scss */
+.gallery ul li:not(:first-child) {
   display: none;
 }
-/* line 34, ../components/sass/_woodwork.scss */
-.gallery-container .gallery li img {
+/* line 35, ../components/sass/_woodwork.scss */
+.gallery ul li img {
   width: inherit;
   margin: 0 auto;
   padding: 0;
   border-radius: 2px;
-  display: inline-block;
+  display: block;
 }
-/* line 41, ../components/sass/_woodwork.scss */
-.gallery-container .gallery li p {
-  margin: 0;
+/* line 42, ../components/sass/_woodwork.scss */
+.gallery ul li p {
+  margin-top: 4px;
   padding: 6px 4px 12px;
   font-size: .75em;
   text-align: center;
@@ -962,113 +971,89 @@ PAGE: PORTFOLIO
   background: linear-gradient(rgba(248, 255, 217, 0.3), rgba(248, 255, 217, 0.5));
 }
 @media (min-width: 434px) {
-  /* line 41, ../components/sass/_woodwork.scss */
-  .gallery-container .gallery li p {
+  /* line 42, ../components/sass/_woodwork.scss */
+  .gallery ul li p {
     height: 52px;
   }
 }
 @media (min-width: 815px) {
-  /* line 41, ../components/sass/_woodwork.scss */
-  .gallery-container .gallery li p {
+  /* line 42, ../components/sass/_woodwork.scss */
+  .gallery ul li p {
     height: 33px;
   }
 }
-/* line 60, ../components/sass/_woodwork.scss */
-.gallery-container .overlay {
+
+/* line 62, ../components/sass/_woodwork.scss */
+.lightBox {
   position: absolute;
   z-index: 100;
-  top: 12%;
-  left: 0;
+  top: 0;
+  left: 10%;
   width: 100%;
-  min-height: auto;
-  margin: 6px;
-  padding: 6%;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.85);
+  /*background: rgba(0,0,0, .25);*/
 }
-/* line 72, ../components/sass/_woodwork.scss */
-.gallery-container .overlay img {
-  padding: 6% 7%;
-  border: .15em solid black;
+/* line 73, ../components/sass/_woodwork.scss */
+.lightBox .imgBox {
+  position: relative;
+  width: 80%;
 }
-/* line 77, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .left, .gallery-container .overlay .right, .gallery-container .overlay .close, .gallery-container .overlay .top {
+/* line 76, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .left, .lightBox .imgBox .right, .lightBox .imgBox .close {
   position: absolute;
   color: rgba(255, 255, 255, 0.4);
-  background: rgba(127, 127, 127, 0.3);
-  font-size: 2.4em;
+  background: rgba(127, 127, 127, 0.08);
+  font-size: 2.2em;
 }
-/* line 82, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .left:hover, .gallery-container .overlay .right:hover, .gallery-container .overlay .close:hover, .gallery-container .overlay .top:hover {
+/* line 81, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .left:hover, .lightBox .imgBox .right:hover, .lightBox .imgBox .close:hover {
   cursor: pointer;
   background: rgba(127, 127, 127, 0.6);
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 88, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .left, .gallery-container .overlay .right {
-  top: 8%;
-  width: 7%;
-  height: 82%;
+/* line 87, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .left, .lightBox .imgBox .right {
+  top: 0;
+  width: 8%;
+  height: 100%;
   padding-top: 32%;
 }
-@media (min-width: 580px) {
-  /* line 88, ../components/sass/_woodwork.scss */
-  .gallery-container .overlay .left, .gallery-container .overlay .right {
-    height: 83.10%;
-  }
-}
-@media (min-width: 690px) {
-  /* line 88, ../components/sass/_woodwork.scss */
-  .gallery-container .overlay .left, .gallery-container .overlay .right {
-    height: 83.25%;
-  }
-}
-/* line 100, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .left {
+/* line 94, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .left {
   left: 0;
 }
-/* line 103, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .right {
+/* line 97, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .right {
   right: 0;
 }
-/* line 106, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .close, .gallery-container .overlay .top {
+/* line 100, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .close {
   left: 0;
-  width: 100%;
-}
-/* line 110, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .top {
-  top: 0;
-  height: 7.75%;
-}
-/* line 114, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .close {
   bottom: 0;
-  height: 9.75%;
-}
-@media (min-width: 580px) {
-  /* line 114, ../components/sass/_woodwork.scss */
-  .gallery-container .overlay .close {
-    height: 9.05%;
-  }
-}
-@media (min-width: 690px) {
-  /* line 114, ../components/sass/_woodwork.scss */
-  .gallery-container .overlay .close {
-    height: 8.85%;
-  }
-}
-/* line 124, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .caption {
-  position: absolute;
-  bottom: -10.5%;
-  left: 0;
   width: 100%;
-  height: 10%;
+  height: 8%;
 }
-/* line 130, ../components/sass/_woodwork.scss */
-.gallery-container .overlay .caption p {
-  line-height: 1.6em;
+/* line 106, ../components/sass/_woodwork.scss */
+.lightBox .imgBox img {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  border: .08em solid black;
+}
+/* line 113, ../components/sass/_woodwork.scss */
+.lightBox .caption {
+  width: 80%;
+  height: auto;
+  margin-top: none;
   font-size: 1rem;
-  color: #292b3d;
+  border-radius: 2px;
+  color: #d4d6e2;
+  background: rgba(45, 45, 45, 0.9);
+}
+
+/* line 126, ../components/sass/_woodwork.scss */
+.imageTest {
+  border: 3px solid green;
 }
