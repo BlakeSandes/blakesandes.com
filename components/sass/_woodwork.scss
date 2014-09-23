@@ -33,7 +33,7 @@ PAGE: PORTFOLIO
         display: none;
       }
       img {
-        width: inherit;
+        width: 100%;
         margin: 0 auto;
         padding: 0;
         border-radius: 2px;
@@ -59,7 +59,7 @@ PAGE: PORTFOLIO
   }
 }
 
-.lightBox {
+#lightBox {
   position: absolute;
   z-index: 100;
   top: 0;
@@ -70,10 +70,10 @@ PAGE: PORTFOLIO
   text-align: center;
   
   /*background: rgba(0,0,0, .25);*/
-  .imgBox {
+  #imgBox {
     position: relative;
     width: 80%;
-    .left,.right,.close {
+    #previous,#next,#close {
       position: absolute;
       color: rgba(255,255,255, .4);
       background: rgba(127,127,127, .08);
@@ -84,20 +84,20 @@ PAGE: PORTFOLIO
         color: rgba(255,255,255, .8);
       }
     }
-    .left, .right {
+    #previous,  #next {
       top: 0;
       width: 8%;
       height: 100%;
       padding-top: 32%;
       
     }
-    .left {
+    #previous {
       left: 0;
     }
-    .right {
+     #next {
       right: 0;
     } 
-    .close {
+    #close {
       left: 0;
       bottom: 0;
       width: 100%;
@@ -110,7 +110,7 @@ PAGE: PORTFOLIO
       border: .08em solid black;
     }
   }
-  .caption {
+  #caption {
     width: 80%;
     height: auto;
     margin-top: none;
@@ -123,9 +123,6 @@ PAGE: PORTFOLIO
 } 
 
 
-.imageTest {
-  border: 3px solid green;
-}
 
 
 

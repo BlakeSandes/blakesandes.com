@@ -521,7 +521,7 @@ HEADER
 /* line 5, ../components/sass/_mainNav.scss */
 header {
   position: relative;
-  margin: 1em auto 0;
+  margin: .12em auto 0;
   width: 100%;
   height: 120px;
   background: linear-gradient(to bottom, #72aad6, #82b9ff);
@@ -539,7 +539,7 @@ header {
     box-shadow: inset 0 0 2.5px #ddebf3;
   }
 }
-/* line 19, ../components/sass/_mainNav.scss */
+/* line 20, ../components/sass/_mainNav.scss */
 header .logo {
   height: 100%;
   text-align: center;
@@ -547,12 +547,12 @@ header .logo {
   color: #ddebf3;
   transition: color 1s;
 }
-/* line 25, ../components/sass/_mainNav.scss */
+/* line 26, ../components/sass/_mainNav.scss */
 header .logo:hover {
   color: rgba(255, 251, 84, 0.75);
 }
 @media screen and (min-width: 620px) {
-  /* line 19, ../components/sass/_mainNav.scss */
+  /* line 20, ../components/sass/_mainNav.scss */
   header .logo {
     float: left;
     margin-left: 5%;
@@ -560,7 +560,7 @@ header .logo:hover {
     width: 30%;
   }
 }
-/* line 35, ../components/sass/_mainNav.scss */
+/* line 36, ../components/sass/_mainNav.scss */
 header .logo h1 {
   font-family: Georgia, Times;
   margin: 0;
@@ -570,12 +570,12 @@ header .logo h1 {
   line-height: 0.8em;
 }
 @media screen and (min-width: 620px) {
-  /* line 35, ../components/sass/_mainNav.scss */
+  /* line 36, ../components/sass/_mainNav.scss */
   header .logo h1 {
     font-size: 1.85em;
   }
 }
-/* line 46, ../components/sass/_mainNav.scss */
+/* line 47, ../components/sass/_mainNav.scss */
 header .logo h2 {
   font-size: 0.75em;
   margin: 0;
@@ -583,14 +583,14 @@ header .logo h2 {
   font-weight: normal;
 }
 @media screen and (min-width: 620px) {
-  /* line 46, ../components/sass/_mainNav.scss */
+  /* line 47, ../components/sass/_mainNav.scss */
   header .logo h2 {
     font-size: 0.865em;
     margin-bottom: 20px;
     padding-bottom: 0;
   }
 }
-/* line 63, ../components/sass/_mainNav.scss */
+/* line 64, ../components/sass/_mainNav.scss */
 header nav {
   display: block;
   text-align: center;
@@ -600,7 +600,7 @@ header nav {
   background: linear-gradient(to bottom, #72aad6, #82b9ff);
 }
 @media screen and (min-width: 620px) {
-  /* line 63, ../components/sass/_mainNav.scss */
+  /* line 64, ../components/sass/_mainNav.scss */
   header nav {
     background: none;
     float: right;
@@ -612,30 +612,30 @@ header nav {
     box-shadow: none;
   }
 }
-/* line 82, ../components/sass/_mainNav.scss */
+/* line 83, ../components/sass/_mainNav.scss */
 header nav ul {
   list-style: none;
   margin: 0 10px;
   padding: 0;
 }
-/* line 87, ../components/sass/_mainNav.scss */
+/* line 88, ../components/sass/_mainNav.scss */
 header nav li {
   display: inline-block;
   height: inherit;
   margin: 0;
   min-width: 64px;
 }
-/* line 93, ../components/sass/_mainNav.scss */
+/* line 94, ../components/sass/_mainNav.scss */
 header nav li:nth-child(2) {
   height: 36px;
 }
-/* line 95, ../components/sass/_mainNav.scss */
+/* line 96, ../components/sass/_mainNav.scss */
 header nav li:nth-child(2) a {
   height: inherit;
   width: 84px;
   padding-top: 6px;
 }
-/* line 105, ../components/sass/_mainNav.scss */
+/* line 106, ../components/sass/_mainNav.scss */
 header nav li a {
   display: block;
   height: inherit;
@@ -644,7 +644,7 @@ header nav li a {
   transition: background .5s, color .25s;
 }
 
-/* line 121, ../components/sass/_mainNav.scss */
+/* line 122, ../components/sass/_mainNav.scss */
 .selected {
   color: white;
   text-shadow: 0 0 1px #787ea5;
@@ -785,15 +785,20 @@ header nav li a {
   box-shadow: 0 0 1px black;
 }
 /* line 20, ../components/sass/_mainPortfolio.scss */
+.portfolio div ul li img {
+  vertical-align: bottom;
+}
+/* line 23, ../components/sass/_mainPortfolio.scss */
 .portfolio div ul li:last-child {
   display: none;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: auto;
   width: 100%;
   background: rgba(64, 64, 64, 0.8);
 }
-/* line 27, ../components/sass/_mainPortfolio.scss */
+/* line 31, ../components/sass/_mainPortfolio.scss */
 .portfolio div ul li:last-child a {
   height: 100%;
   color: white;
@@ -803,8 +808,16 @@ header nav li a {
   font-size: .85em;
   line-height: 1.3em;
 }
+@media (max-width: 440px) {
+  /* line 31, ../components/sass/_mainPortfolio.scss */
+  .portfolio div ul li:last-child a {
+    font-size: .65rem;
+    line-height: 1rem;
+    padding-top: 0;
+  }
+}
 @media (min-width: 470px) {
-  /* line 27, ../components/sass/_mainPortfolio.scss */
+  /* line 31, ../components/sass/_mainPortfolio.scss */
   .portfolio div ul li:last-child a {
     font-size: 1rem;
     line-height: 1.3em;
@@ -812,13 +825,13 @@ header nav li a {
   }
 }
 @media (min-width: 620px) {
-  /* line 27, ../components/sass/_mainPortfolio.scss */
+  /* line 31, ../components/sass/_mainPortfolio.scss */
   .portfolio div ul li:last-child a {
     font-size: 1.1em;
     line-height: 1.6em;
   }
 }
-/* line 46, ../components/sass/_mainPortfolio.scss */
+/* line 55, ../components/sass/_mainPortfolio.scss */
 .portfolio div ul li a {
   display: block;
 }
@@ -954,7 +967,7 @@ PAGE: PORTFOLIO
 }
 /* line 35, ../components/sass/_woodwork.scss */
 .gallery ul li img {
-  width: inherit;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   border-radius: 2px;
@@ -984,7 +997,7 @@ PAGE: PORTFOLIO
 }
 
 /* line 62, ../components/sass/_woodwork.scss */
-.lightBox {
+#lightBox {
   position: absolute;
   z-index: 100;
   top: 0;
@@ -996,54 +1009,54 @@ PAGE: PORTFOLIO
   /*background: rgba(0,0,0, .25);*/
 }
 /* line 73, ../components/sass/_woodwork.scss */
-.lightBox .imgBox {
+#lightBox #imgBox {
   position: relative;
   width: 80%;
 }
 /* line 76, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .left, .lightBox .imgBox .right, .lightBox .imgBox .close {
+#lightBox #imgBox #previous, #lightBox #imgBox #next, #lightBox #imgBox #close {
   position: absolute;
   color: rgba(255, 255, 255, 0.4);
   background: rgba(127, 127, 127, 0.08);
   font-size: 2.2em;
 }
 /* line 81, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .left:hover, .lightBox .imgBox .right:hover, .lightBox .imgBox .close:hover {
+#lightBox #imgBox #previous:hover, #lightBox #imgBox #next:hover, #lightBox #imgBox #close:hover {
   cursor: pointer;
   background: rgba(127, 127, 127, 0.6);
   color: rgba(255, 255, 255, 0.8);
 }
 /* line 87, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .left, .lightBox .imgBox .right {
+#lightBox #imgBox #previous, #lightBox #imgBox #next {
   top: 0;
   width: 8%;
   height: 100%;
   padding-top: 32%;
 }
 /* line 94, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .left {
+#lightBox #imgBox #previous {
   left: 0;
 }
 /* line 97, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .right {
+#lightBox #imgBox #next {
   right: 0;
 }
 /* line 100, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .close {
+#lightBox #imgBox #close {
   left: 0;
   bottom: 0;
   width: 100%;
   height: 8%;
 }
 /* line 106, ../components/sass/_woodwork.scss */
-.lightBox .imgBox img {
+#lightBox #imgBox img {
   display: block;
   width: 100%;
   min-height: 100%;
   border: .08em solid black;
 }
 /* line 113, ../components/sass/_woodwork.scss */
-.lightBox .caption {
+#lightBox #caption {
   width: 80%;
   height: auto;
   margin-top: none;
@@ -1051,9 +1064,4 @@ PAGE: PORTFOLIO
   border-radius: 2px;
   color: #d4d6e2;
   background: rgba(45, 45, 45, 0.9);
-}
-
-/* line 126, ../components/sass/_woodwork.scss */
-.imageTest {
-  border: 3px solid green;
 }
