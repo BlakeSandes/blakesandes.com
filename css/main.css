@@ -1,408 +1,10 @@
-/* line 46, ../components/sass/_normalize.scss */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/* line 62, ../components/sass/_normalize.scss */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-/* line 75, ../components/sass/_normalize.scss */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/* line 85, ../components/sass/_normalize.scss */
-[hidden], template {
-  display: none;
-}
-
-/* line 98, ../components/sass/_normalize.scss */
-html {
-  background: white;
-  color: black;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-/* line 110, ../components/sass/_normalize.scss */
-html,
-button,
-input,
-select,
-textarea {
-  font-family: sans-serif;
-}
-
-/* line 120, ../components/sass/_normalize.scss */
-body {
-  margin: 0;
-}
-
-/* line 133, ../components/sass/_normalize.scss */
-a {
-  background: transparent;
-}
-/* line 140, ../components/sass/_normalize.scss */
-a:focus {
-  outline: thin dotted;
-}
-/* line 146, ../components/sass/_normalize.scss */
-a:hover, a:active {
-  outline: 0;
-}
-
-/* line 160, ../components/sass/_normalize.scss */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* line 165, ../components/sass/_normalize.scss */
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
-}
-
-/* line 170, ../components/sass/_normalize.scss */
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
-}
-
-/* line 175, ../components/sass/_normalize.scss */
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
-}
-
-/* line 180, ../components/sass/_normalize.scss */
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-
-/* line 185, ../components/sass/_normalize.scss */
-h6 {
-  font-size: 0.75em;
-  margin: 2.33em 0;
-}
-
-/* line 193, ../components/sass/_normalize.scss */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/* line 199, ../components/sass/_normalize.scss */
-b,
-strong {
-  font-weight: bold;
-}
-
-/* line 212, ../components/sass/_normalize.scss */
-dfn {
-  font-style: italic;
-}
-
-/* line 218, ../components/sass/_normalize.scss */
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/* line 234, ../components/sass/_normalize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-/* line 247, ../components/sass/_normalize.scss */
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-/* line 255, ../components/sass/_normalize.scss */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-/* line 270, ../components/sass/_normalize.scss */
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-/* line 278, ../components/sass/_normalize.scss */
-small {
-  font-size: 80%;
-}
-
-/* line 285, ../components/sass/_normalize.scss */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-/* line 293, ../components/sass/_normalize.scss */
-sup {
-  top: -0.5em;
-}
-
-/* line 297, ../components/sass/_normalize.scss */
-sub {
-  bottom: -0.25em;
-}
-
-/* line 349, ../components/sass/_normalize.scss */
-img {
-  border: 0;
-}
-
-/* line 358, ../components/sass/_normalize.scss */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* line 368, ../components/sass/_normalize.scss */
-figure {
-  margin: 0;
-}
-
-/* line 385, ../components/sass/_normalize.scss */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/* line 396, ../components/sass/_normalize.scss */
-legend {
-  border: 0;
-  padding: 0;
-  white-space: normal;
-}
-
-/* line 410, ../components/sass/_normalize.scss */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
-  vertical-align: baseline;
-}
-
-/* line 425, ../components/sass/_normalize.scss */
-button,
-input {
-  line-height: normal;
-}
-
-/* line 435, ../components/sass/_normalize.scss */
-button,
-select {
-  text-transform: none;
-}
-
-/* line 448, ../components/sass/_normalize.scss */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-
-/* line 461, ../components/sass/_normalize.scss */
-button[disabled],
-input[disabled] {
-  cursor: default;
-}
-
-/* line 471, ../components/sass/_normalize.scss */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-/* line 484, ../components/sass/_normalize.scss */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-/* line 494, ../components/sass/_normalize.scss */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/* line 503, ../components/sass/_normalize.scss */
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/* line 512, ../components/sass/_normalize.scss */
-textarea {
-  overflow: auto;
-  vertical-align: top;
-}
-
-/* line 523, ../components/sass/_normalize.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Global
-==================================== */
-/* line 5, ../components/sass/_grid.scss */
-.grid {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* line 9, ../components/sass/_grid.scss */
-img {
-  width: 100%;
-}
-
-/* Media Queries
-==================================== */
-/* Mobile Hidden */
-@media (min-width: 1px) and (max-width: 767px) {
-  /* line 21, ../components/sass/_grid.scss */
-  .hide-mobile {
-    display: none;
-  }
-}
-/* Columns 
-==================================== */
-/* line 30, ../components/sass/_grid.scss */
-.grid > [class^="col-"] {
-  min-height: 1px;
-  margin-bottom: 2%;
-  margin-right: 2%;
-  float: left;
-}
-
-/* line 36, ../components/sass/_grid.scss */
-.grid > [class^="col-"]:first-child {
-  margin-left: 0;
-}
-
-/* line 39, ../components/sass/_grid.scss */
-.grid > [class^="col-"]:last-child {
-  margin-right: 0;
-}
-
-/* Columns are 65px wide, with 20px gutters
-========================================== */
-/* line 45, ../components/sass/_grid.scss */
-.col-1 {
-  width: 6.5%;
-}
-
-/* line 50, ../components/sass/_grid.scss */
-.col-2 {
-  width: 15%;
-}
-
-/* line 55, ../components/sass/_grid.scss */
-.col-3 {
-  width: 23.5%;
-}
-
-/* line 60, ../components/sass/_grid.scss */
-.col-4 {
-  width: 32%;
-}
-
-/* line 65, ../components/sass/_grid.scss */
-.col-5 {
-  width: 40.5%;
-}
-
-/* line 70, ../components/sass/_grid.scss */
-.col-6 {
-  width: 49%;
-}
-
-/* line 75, ../components/sass/_grid.scss */
-.col-7 {
-  width: 57.5%;
-}
-
-/* line 80, ../components/sass/_grid.scss */
-.col-8 {
-  width: 66%;
-}
-
-/* line 85, ../components/sass/_grid.scss */
-.col-9 {
-  width: 74.5%;
-}
-
-/* line 90, ../components/sass/_grid.scss */
-.col-10 {
-  width: 83%;
-}
-
-/* line 95, ../components/sass/_grid.scss */
-.col-11 {
-  width: 91.5%;
-}
-
-/* line 100, ../components/sass/_grid.scss */
-.col-12 {
-  width: 100%;
-}
-
-/* Clearfix
-==================================== */
-/* line 108, ../components/sass/_grid.scss */
-.group:after, .grid:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* line 3, ../components/sass/_mainMixins.scss */
 body .container .main:after {
   content: " ";
   display: table;
   clear: both;
 }
-/* line 7, ../components/sass/_mainMixins.scss */
-989
+/* line 8, ../components/sass/_mainMixins.scss */
 body .container .main {
   *zoom: 1;
 }
@@ -432,9 +34,6 @@ header nav li a {
   box-shadow: 0 0 1px #787ea5;
 }
 
-/***********************************************
-GENERAL
-***********************************************/
 /* line 6, ../components/sass/_mainGlobals.scss */
 * {
   -webkit-box-sizing: border-box;
@@ -515,10 +114,7 @@ h3 {
   background: url("../images/background/cream_dust_@2X.png");
 }
 
-/***********************************************
-HEADER
-***********************************************/
-/* line 5, ../components/sass/_mainNav.scss */
+/* line 3, ../components/sass/_mainNav.scss */
 header {
   position: relative;
   margin: .12em auto 0;
@@ -531,7 +127,7 @@ header {
   ***********************************************/
 }
 @media screen and (min-width: 620px) {
-  /* line 5, ../components/sass/_mainNav.scss */
+  /* line 3, ../components/sass/_mainNav.scss */
   header {
     height: 98px;
     padding-top: 12px;
@@ -539,7 +135,7 @@ header {
     box-shadow: inset 0 0 2.5px #ddebf3;
   }
 }
-/* line 20, ../components/sass/_mainNav.scss */
+/* line 18, ../components/sass/_mainNav.scss */
 header .logo {
   height: 100%;
   text-align: center;
@@ -547,12 +143,12 @@ header .logo {
   color: #ddebf3;
   transition: color 1s;
 }
-/* line 26, ../components/sass/_mainNav.scss */
+/* line 24, ../components/sass/_mainNav.scss */
 header .logo:hover {
   color: rgba(255, 251, 84, 0.75);
 }
 @media screen and (min-width: 620px) {
-  /* line 20, ../components/sass/_mainNav.scss */
+  /* line 18, ../components/sass/_mainNav.scss */
   header .logo {
     float: left;
     margin-left: 5%;
@@ -560,7 +156,7 @@ header .logo:hover {
     width: 30%;
   }
 }
-/* line 36, ../components/sass/_mainNav.scss */
+/* line 34, ../components/sass/_mainNav.scss */
 header .logo h1 {
   font-family: Georgia, Times;
   margin: 0;
@@ -570,12 +166,12 @@ header .logo h1 {
   line-height: 0.8em;
 }
 @media screen and (min-width: 620px) {
-  /* line 36, ../components/sass/_mainNav.scss */
+  /* line 34, ../components/sass/_mainNav.scss */
   header .logo h1 {
     font-size: 1.85em;
   }
 }
-/* line 47, ../components/sass/_mainNav.scss */
+/* line 45, ../components/sass/_mainNav.scss */
 header .logo h2 {
   font-size: 0.75em;
   margin: 0;
@@ -583,14 +179,14 @@ header .logo h2 {
   font-weight: normal;
 }
 @media screen and (min-width: 620px) {
-  /* line 47, ../components/sass/_mainNav.scss */
+  /* line 45, ../components/sass/_mainNav.scss */
   header .logo h2 {
     font-size: 0.865em;
     margin-bottom: 20px;
     padding-bottom: 0;
   }
 }
-/* line 64, ../components/sass/_mainNav.scss */
+/* line 62, ../components/sass/_mainNav.scss */
 header nav {
   display: block;
   text-align: center;
@@ -600,7 +196,7 @@ header nav {
   background: linear-gradient(to bottom, #72aad6, #82b9ff);
 }
 @media screen and (min-width: 620px) {
-  /* line 64, ../components/sass/_mainNav.scss */
+  /* line 62, ../components/sass/_mainNav.scss */
   header nav {
     background: none;
     float: right;
@@ -612,30 +208,30 @@ header nav {
     box-shadow: none;
   }
 }
-/* line 83, ../components/sass/_mainNav.scss */
+/* line 81, ../components/sass/_mainNav.scss */
 header nav ul {
   list-style: none;
   margin: 0 10px;
   padding: 0;
 }
-/* line 88, ../components/sass/_mainNav.scss */
+/* line 86, ../components/sass/_mainNav.scss */
 header nav li {
   display: inline-block;
   height: inherit;
   margin: 0;
   min-width: 64px;
 }
-/* line 94, ../components/sass/_mainNav.scss */
+/* line 92, ../components/sass/_mainNav.scss */
 header nav li:nth-child(2) {
   height: 36px;
 }
-/* line 96, ../components/sass/_mainNav.scss */
+/* line 94, ../components/sass/_mainNav.scss */
 header nav li:nth-child(2) a {
   height: inherit;
   width: 84px;
   padding-top: 6px;
 }
-/* line 106, ../components/sass/_mainNav.scss */
+/* line 104, ../components/sass/_mainNav.scss */
 header nav li a {
   display: block;
   height: inherit;
@@ -644,7 +240,7 @@ header nav li a {
   transition: background .5s, color .25s;
 }
 
-/* line 122, ../components/sass/_mainNav.scss */
+/* line 120, ../components/sass/_mainNav.scss */
 .selected {
   color: white;
   text-shadow: 0 0 1px #787ea5;
@@ -921,39 +517,36 @@ header nav li a {
   margin: 0px auto;
 }
 
-/***********************************************
-PAGE: PORTFOLIO
-***********************************************/
-/* line 4, ../components/sass/_woodwork.scss */
+/* line 3, ../components/sass/_woodwork.scss */
 .galleryIntro {
   margin-bottom: 24px;
 }
-/* line 6, ../components/sass/_woodwork.scss */
+/* line 5, ../components/sass/_woodwork.scss */
 .galleryIntro p {
   margin: 0 auto;
   width: 80%;
 }
 
-/* line 13, ../components/sass/_woodwork.scss */
+/* line 12, ../components/sass/_woodwork.scss */
 .gallery {
   margin: 0;
   padding: 0;
 }
-/* line 16, ../components/sass/_woodwork.scss */
+/* line 15, ../components/sass/_woodwork.scss */
 .gallery ul {
-  display: inline-block;
+  display: block;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 21, ../components/sass/_woodwork.scss */
+/* line 20, ../components/sass/_woodwork.scss */
 .gallery ul:nth-child(even) {
   float: right;
   margin-right: 0;
 }
 /* line 25, ../components/sass/_woodwork.scss */
 .gallery ul li {
-  display: inline-block;
+  display: block;
   margin: 0;
   padding: 0;
 }
@@ -967,11 +560,11 @@ PAGE: PORTFOLIO
 }
 /* line 35, ../components/sass/_woodwork.scss */
 .gallery ul li img {
+  display: block;
   width: 100%;
   margin: 0 auto;
   padding: 0;
   border-radius: 2px;
-  display: block;
 }
 /* line 42, ../components/sass/_woodwork.scss */
 .gallery ul li p {
@@ -995,8 +588,12 @@ PAGE: PORTFOLIO
     height: 33px;
   }
 }
+/* line 60, ../components/sass/_woodwork.scss */
+.gallery .active-image {
+  display: block;
+}
 
-/* line 62, ../components/sass/_woodwork.scss */
+/* line 67, ../components/sass/_woodwork.scss */
 #lightBox {
   position: absolute;
   z-index: 100;
@@ -1008,54 +605,63 @@ PAGE: PORTFOLIO
   text-align: center;
   /*background: rgba(0,0,0, .25);*/
 }
-/* line 73, ../components/sass/_woodwork.scss */
+/* line 78, ../components/sass/_woodwork.scss */
 #lightBox #imgBox {
+  display: none;
   position: relative;
   width: 80%;
 }
-/* line 76, ../components/sass/_woodwork.scss */
-#lightBox #imgBox #previous, #lightBox #imgBox #next, #lightBox #imgBox #close {
+/* line 82, ../components/sass/_woodwork.scss */
+#lightBox #imgBox li {
+  list-style: none;
+}
+/* line 84, ../components/sass/_woodwork.scss */
+#lightBox #imgBox li img {
+  vertical-align: bottom;
+}
+/* line 89, ../components/sass/_woodwork.scss */
+#lightBox #imgBox .previous, #lightBox #imgBox .next, #lightBox #imgBox .close {
   position: absolute;
   color: rgba(255, 255, 255, 0.4);
   background: rgba(127, 127, 127, 0.08);
   font-size: 2.2em;
 }
-/* line 81, ../components/sass/_woodwork.scss */
-#lightBox #imgBox #previous:hover, #lightBox #imgBox #next:hover, #lightBox #imgBox #close:hover {
+/* line 94, ../components/sass/_woodwork.scss */
+#lightBox #imgBox .previous:hover, #lightBox #imgBox .next:hover, #lightBox #imgBox .close:hover {
   cursor: pointer;
   background: rgba(127, 127, 127, 0.6);
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 87, ../components/sass/_woodwork.scss */
-#lightBox #imgBox #previous, #lightBox #imgBox #next {
+/* line 100, ../components/sass/_woodwork.scss */
+#lightBox #imgBox .previous, #lightBox #imgBox .next {
   top: 0;
   width: 8%;
   height: 100%;
   padding-top: 32%;
 }
-/* line 94, ../components/sass/_woodwork.scss */
-#lightBox #imgBox #previous {
+/* line 107, ../components/sass/_woodwork.scss */
+#lightBox #imgBox .previous {
   left: 0;
 }
-/* line 97, ../components/sass/_woodwork.scss */
-#lightBox #imgBox #next {
+/* line 110, ../components/sass/_woodwork.scss */
+#lightBox #imgBox .next {
   right: 0;
 }
-/* line 100, ../components/sass/_woodwork.scss */
-#lightBox #imgBox #close {
+/* line 113, ../components/sass/_woodwork.scss */
+#lightBox #imgBox .close {
   left: 0;
   bottom: 0;
   width: 100%;
   height: 8%;
 }
-/* line 106, ../components/sass/_woodwork.scss */
+/* line 119, ../components/sass/_woodwork.scss */
 #lightBox #imgBox img {
   display: block;
   width: 100%;
   min-height: 100%;
   border: .08em solid black;
 }
-/* line 113, ../components/sass/_woodwork.scss */
+/* line 126, ../components/sass/_woodwork.scss */
 #lightBox #caption {
   width: 80%;
   height: auto;

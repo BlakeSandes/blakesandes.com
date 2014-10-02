@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/*======CLEAR FLOATS======*/
+//======CLEAR FLOATS======
 @mixin clearfix {
     &:after {
         content:"";
@@ -11,7 +11,7 @@
     }
 }
 
-/*======CLEAR INPUT FIELDS ETC.======*/
+//======CLEAR INPUT FIELDS ETC.======
 
 input[type=date],input[type=submit] {
   border: none;
@@ -19,7 +19,7 @@ input[type=date],input[type=submit] {
 }
 
 
-/*======SHARED FORM STYLES======*/
+//======SHARED FORM STYLES======
 
 .mainForm {
   max-width: 400px;

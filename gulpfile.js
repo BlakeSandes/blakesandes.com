@@ -29,16 +29,22 @@ env = process.env.NODE_ENV || 'development';
 if (env==='development') {
   outputDir = 'builds/development/';
   sassStyle = 'expanded';
-} else {
+} else  {
   outputDir = 'builds/production/';
   sassStyle = 'compressed';
 }
 
- coffeeSources = ['components/coffee/*.coffee']
- jsSources = ['components/scripts/*.js']
- sassSources = ['components/sass/main.scss','components/sass/flight.scss','components/sass/tribes.scss']
- htmlSources = [outputDir + '*.html']
- jsonSources = [outputDir + 'js/*.json']
+ coffeeSources = ['components/coffee/*.coffee'];
+ jsSources = ['components/scripts/*.js'];
+ sassSources = [
+    'components/sass/main.scss',
+    'components/sass/tribes.scss', 
+    'components/sass/flight.scss', 
+    'components/sass/normalize.scss',
+    'components/sass/grid.scss'
+  ];
+ htmlSources = [outputDir + '*.html'];
+ jsonSources = [outputDir + 'js/*.json'];
 
 
 gulp.task('coffee', function() {
@@ -64,8 +70,7 @@ gulp.task('compass', function() {
     .pipe(compass({
       sass: 'components/sass',
       image: outputDir + 'images',
-      style: sassStyle,
-      require: ['bourbon', 'neat'],
+      style: sassStyle
     })
     .on('error', gutil.log))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
@@ -115,9 +120,3 @@ gulp.task('json', function() {
 });
 
 gulp.task('default', ['html', 'json', 'coffee','js', 'compass', 'images', 'connect', 'watch']);
-
-
-
-
-
-

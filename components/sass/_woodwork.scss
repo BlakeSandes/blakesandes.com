@@ -1,6 +1,5 @@
-/***********************************************
-PAGE: PORTFOLIO
-***********************************************/
+
+
 .galleryIntro {
   margin-bottom: 24px;
   p {
@@ -14,7 +13,7 @@ PAGE: PORTFOLIO
   margin: 0;
   padding: 0;
   ul {
-    display: inline-block;
+    display: block;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -22,8 +21,9 @@ PAGE: PORTFOLIO
       float: right;
       margin-right: 0;
     }
+    
     li {
-      display: inline-block;
+      display: block;
       margin: 0;
       padding: 0;
       &:hover {
@@ -33,11 +33,11 @@ PAGE: PORTFOLIO
         display: none;
       }
       img {
+        display: block;
         width: 100%;
         margin: 0 auto;
         padding: 0;
         border-radius: 2px;
-        display: block;
       }
       p {
         margin-top: 4px;
@@ -57,7 +57,12 @@ PAGE: PORTFOLIO
       }
     }
   }
+  .active-image {
+    display: block;
+  }
 }
+
+
 
 #lightBox {
   position: absolute;
@@ -68,12 +73,20 @@ PAGE: PORTFOLIO
   margin: 0;
   padding: 0;
   text-align: center;
-  
+
   /*background: rgba(0,0,0, .25);*/
   #imgBox {
+    display: none;
     position: relative;
     width: 80%;
-    #previous,#next,#close {
+    li {
+      list-style: none;
+      img {
+        vertical-align: bottom;
+      }
+      
+    }
+    .previous,.next,.close {
       position: absolute;
       color: rgba(255,255,255, .4);
       background: rgba(127,127,127, .08);
@@ -84,20 +97,20 @@ PAGE: PORTFOLIO
         color: rgba(255,255,255, .8);
       }
     }
-    #previous,  #next {
+    .previous,  .next {
       top: 0;
       width: 8%;
       height: 100%;
       padding-top: 32%;
       
     }
-    #previous {
+    .previous {
       left: 0;
     }
-     #next {
+     .next {
       right: 0;
     } 
-    #close {
+    .close {
       left: 0;
       bottom: 0;
       width: 100%;

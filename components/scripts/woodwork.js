@@ -2,6 +2,7 @@ var $;
 
 $ = require('jquery');
 
+// One of my previous unseccessful attemps.
 
 // var imageParentTwoLI = $(".imageParent2 li");
 // var gallery_item = [];
@@ -102,29 +103,76 @@ $ = require('jquery');
 // });
 
 
-var $parent = $('#imageParent li');
-var $element = $('#imageParent img');
-var $index = 0;
-var $total = $element.length - 1;
-var $nav = $('<span id="previous"><</span><span id="next">></span><span id="close">x</span>')
+var $element = $('.each-gallery img');
 
-// $('#imgBox').html('<img src="'+$($element[$index]).attr('src')+'" />').append($nav);
-$element.on('click', function(event) {
-  var S = $(this).attr('src');
-  $('#imgBox').html('<img src="'+S+'" />').append($nav);
-  event.preventDefault();
+// Functional and original.
+
+// Open imgBox.
+$element.on('click',function() {
+  // event.preventDefault();
+  var imgSource = $(this).attr('src');
+
+  $element.closest('li').removeClass('active-image');
+  $(this).closest('li').addClass('active-image');
+  
+  $('#imgBox li').remove();
+  $('#imgBox').show();
+  $('<li><img src="'+imgSource+'" /></li>')
+  .fadeIn(400).appendTo($('#imgBox'));
 });
 
-$('#next').on('click', function() {
-  var A = this.id == 'next';
-  var X = A ? $total : 0;
-  var Y = A ? 0 : $total;
-  var Z = A ? $index + 1 : $index - 1;
-  var $index = $index == X ? Y : Z;
+// Next button behaviour.
+$('.next').on('click', function() {
+  var currentImg = $('.active-image');
+  var nextImg = currentImg.next();
+  var nextImgSource = nextImg.find('img').attr('src');
+  
+  if (nextImg.length === 0) {
+    nextImg = currentImg.closest('.each-gallery').children().first();
+    nextImgSource = nextImg.find('img').attr('src');
+  }
 
-  $('#imgBox').html('<img src="'+$($element[$index]).attr('src')+'" />').append($nav);
+  currentImg.removeClass('active-image');
+  nextImg.addClass('active-image');
+  
+  
+  $('#imgBox li').remove();
+  $('<li><img src="'+nextImgSource+'" /></li>')
+  .fadeIn(400).appendTo($('#imgBox'));
+
+  console.log("The next item length is " + nextImg.length);
+  console.log(nextImgSource);
 });
 
+// Previous button behaviour.
+$('.previous').on('click', function() {
+  var currentImg = $('.active-image');
+  var prevImg = currentImg.prev();
+  var prevImgSource = prevImg.find('img').attr('src');
+
+  if(prevImg.length === 0) {
+    prevImg = currentImg.closest('.each-gallery').children().last();
+    prevImgSource = prevImg.find('img').attr('src');
+  }
+
+  currentImg.removeClass('active-image');
+  prevImg.addClass('active-image');
+
+  $('#imgBox li').remove();
+  $('<li><img src="'+prevImgSource+'" /></li>')
+  .fadeIn(400).appendTo($('#imgBox'));
+
+  console.log("The previous item length is " +prevImg.length);
+  console.log("Previous clicked");
+});
+
+// Close button behaviour.
+$('.close').on('click', function() {
+  $('#imgBox').fadeOut(400);
+});
+
+
+// Code I was inspired by and thought I could use.
 
 // var E = $("a", "#img-list"), N = 0, T = E.length-1;
 
