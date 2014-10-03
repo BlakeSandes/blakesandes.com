@@ -399,10 +399,10 @@ $element.on('click',function() {
   $element.closest('li').removeClass('active-image');
   $(this).closest('li').addClass('active-image');
   
-  $('#imgBox li').remove();
-  $('#imgBox').show();
+  $('.imgBox li').remove();
+  $('.imgBox').show();
   $('<li><img src="'+imgSource+'" /></li>')
-  .fadeIn(400).appendTo($('#imgBox'));
+  .fadeIn(400).appendTo($('.imgBox'));
 });
 
 // Next button behaviour.
@@ -420,12 +420,15 @@ $('.next').on('click', function() {
   nextImg.addClass('active-image');
   
   
-  $('#imgBox li').remove();
+  $('.imgBox li').remove();
   $('<li><img src="'+nextImgSource+'" /></li>')
-  .fadeIn(400).appendTo($('#imgBox'));
+  .fadeIn(400).appendTo($('.imgBox'));
+
+  position($('.lightBox'));
 
   console.log("The next item length is " + nextImg.length);
   console.log(nextImgSource);
+
 });
 
 // Previous button behaviour.
@@ -442,9 +445,9 @@ $('.previous').on('click', function() {
   currentImg.removeClass('active-image');
   prevImg.addClass('active-image');
 
-  $('#imgBox li').remove();
+  $('.imgBox li').remove();
   $('<li><img src="'+prevImgSource+'" /></li>')
-  .fadeIn(400).appendTo($('#imgBox'));
+  .fadeIn(400).appendTo($('.imgBox'));
 
   console.log("The previous item length is " +prevImg.length);
   console.log("Previous clicked");
@@ -452,7 +455,7 @@ $('.previous').on('click', function() {
 
 // Close button behaviour.
 $('.close').on('click', function() {
-  $('#imgBox').fadeOut(400);
+  $('.imgBox').fadeOut(400);
 });
 
 
@@ -470,6 +473,43 @@ $('.close').on('click', function() {
 //     $("#display").html('<img src="'+S+'" />');
 //     e.preventDefault();
 // });
+
+
+// Centering light box in center of viewable window.
+
+function position(elem) {
+  var docHeight = $(window).height();
+  var docWidth = $(window).width();
+  
+
+  var docYcenter = docHeight / 2;
+  var docXcenter = docWidth / 2;
+
+  var elemHeight = ($(elem).outerWidth() / 4) * 3;
+  var elemWidth = $(elem).outerWidth();
+
+  if(elemHeight > elemWidth) {
+    $(elem).width('65%');
+  }
+  
+  console.log("The lightBox height is " +elemHeight);
+  console.log("The lightBox width is " +elemWidth);
+
+  var elemYcenter = elemHeight / 2;
+  var elemXcenter = elemWidth / 2;
+
+  var elemYposition = docYcenter - elemYcenter;
+  var elemXposition = docXcenter - elemXcenter;
+
+  $(elem).css({"position": "fixed", "top": elemYposition, "left": elemXposition });
+
+}
+
+position($('.lightBox'));
+
+$(window).on('resize', function() {
+  position($('.lightBox'));
+});
 
 
 

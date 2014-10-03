@@ -619,75 +619,74 @@ header nav li a {
 }
 
 /* line 67, ../components/sass/_woodwork.scss */
-#lightBox {
+.lightBox {
   position: absolute;
   z-index: 100;
-  top: 0;
-  left: 10%;
-  width: 100%;
+  width: 85%;
+  /*height: 100%;*/
   margin: 0;
   padding: 0;
   text-align: center;
   /*background: rgba(0,0,0, .25);*/
 }
-/* line 78, ../components/sass/_woodwork.scss */
-#lightBox #imgBox {
+/* line 77, ../components/sass/_woodwork.scss */
+.lightBox .imgBox {
   display: none;
   position: relative;
-  width: 80%;
+  width: 100%;
 }
-/* line 82, ../components/sass/_woodwork.scss */
-#lightBox #imgBox li {
+/* line 81, ../components/sass/_woodwork.scss */
+.lightBox .imgBox li {
   list-style: none;
 }
-/* line 84, ../components/sass/_woodwork.scss */
-#lightBox #imgBox li img {
+/* line 83, ../components/sass/_woodwork.scss */
+.lightBox .imgBox li img {
   vertical-align: bottom;
 }
-/* line 89, ../components/sass/_woodwork.scss */
-#lightBox #imgBox .previous, #lightBox #imgBox .next, #lightBox #imgBox .close {
+/* line 88, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .previous, .lightBox .imgBox .next, .lightBox .imgBox .close {
   position: absolute;
   color: rgba(255, 255, 255, 0.4);
   background: rgba(127, 127, 127, 0.08);
   font-size: 2.2em;
 }
-/* line 94, ../components/sass/_woodwork.scss */
-#lightBox #imgBox .previous:hover, #lightBox #imgBox .next:hover, #lightBox #imgBox .close:hover {
+/* line 93, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .previous:hover, .lightBox .imgBox .next:hover, .lightBox .imgBox .close:hover {
   cursor: pointer;
   background: rgba(127, 127, 127, 0.6);
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 100, ../components/sass/_woodwork.scss */
-#lightBox #imgBox .previous, #lightBox #imgBox .next {
+/* line 99, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .previous, .lightBox .imgBox .next {
   top: 0;
   width: 8%;
   height: 100%;
   padding-top: 32%;
 }
-/* line 107, ../components/sass/_woodwork.scss */
-#lightBox #imgBox .previous {
+/* line 106, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .previous {
   left: 0;
 }
-/* line 110, ../components/sass/_woodwork.scss */
-#lightBox #imgBox .next {
+/* line 109, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .next {
   right: 0;
 }
-/* line 113, ../components/sass/_woodwork.scss */
-#lightBox #imgBox .close {
+/* line 112, ../components/sass/_woodwork.scss */
+.lightBox .imgBox .close {
   left: 0;
   bottom: 0;
   width: 100%;
   height: 8%;
 }
-/* line 119, ../components/sass/_woodwork.scss */
-#lightBox #imgBox img {
+/* line 118, ../components/sass/_woodwork.scss */
+.lightBox .imgBox img {
   display: block;
   width: 100%;
   min-height: 100%;
-  border: .08em solid black;
+  border-radius: .15em;
 }
-/* line 126, ../components/sass/_woodwork.scss */
-#lightBox #caption {
+/* line 125, ../components/sass/_woodwork.scss */
+.lightBox #caption {
   width: 80%;
   height: auto;
   margin-top: none;
