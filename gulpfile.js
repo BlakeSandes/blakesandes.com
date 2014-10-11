@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     gulpLoadPlugins = require('gulp-load-plugins'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
+    minifycss = require('gulp-minify-css'),
     minifyfHTML = require('gulp-minify-html'),
     jsonminify = require('gulp-jsonminify'),
     imagemin = require('gulp-imagemin'),
@@ -28,10 +29,8 @@ env = process.env.NODE_ENV || 'development';
 
 if (env==='development') {
   outputDir = 'builds/development/';
-  sassStyle = 'expanded';
 } else  {
   outputDir = 'builds/production/';
-  sassStyle = 'compressed';
 }
 
  coffeeSources = ['components/coffee/*.coffee'];
@@ -40,7 +39,7 @@ if (env==='development') {
     'components/sass/main.scss',
     'components/sass/tribes.scss', 
     'components/sass/flight.scss', 
-    'components/sass/normalize.scss',
+    'components/sass/normalize.scss', 
     'components/sass/grid.scss'
   ];
  htmlSources = [outputDir + '*.html'];
@@ -73,6 +72,7 @@ gulp.task('compass', function() {
       style: sassStyle
     })
     .on('error', gutil.log))
+    .pipe(gulpif(env === 'production',minifycss()))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload())
@@ -120,3 +120,5 @@ gulp.task('json', function() {
 });
 
 gulp.task('default', ['html', 'json', 'coffee','js', 'compass', 'images', 'connect', 'watch']);
+
+
