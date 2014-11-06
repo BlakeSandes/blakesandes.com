@@ -701,3 +701,14 @@ header nav li a {
 .portrait .imgBox .previous, .portrait .imgBox .next {
   padding-top: 65%;
 }
+
+/* line 148, ../components/sass/_woodwork.scss */
+.overlay {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.88);
+}

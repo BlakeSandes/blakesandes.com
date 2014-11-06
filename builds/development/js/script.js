@@ -290,7 +290,7 @@ $ = require('jquery');
 
 
 var $element = $('.each-gallery img');
-
+var $overlay = $('<div class="overlay"></div>');
 // Functional and original.
 
 // Open imgBox.
@@ -308,6 +308,8 @@ $element.on('click',function() {
   .fadeIn(400).appendTo($('.imgBox'));
   
   position($('.lightBox'));
+
+  $overlay.appendTo('.container');
 
   
 });
@@ -367,6 +369,12 @@ $('.previous').on('click', function() {
 
 $('.close').on('click', function() {
   $('.imgBox').fadeOut(400);
+  $overlay.remove();
+});
+
+$('.container').on('click', '.overlay', function(){
+  $('.imgBox').fadeOut(400);
+  $(this).remove();
 });
 
 
