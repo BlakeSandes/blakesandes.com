@@ -43,40 +43,39 @@ header nav li a {
 
 /* line 12, ../components/sass/_mainGlobals.scss */
 html {
-  min-height: 100%;
-  background: linear-gradient(rgba(217, 235, 255, 0.75), rgba(138, 145, 158, 0.75));
-  box-shadow: inset 6px 12px 48px rgba(138, 145, 158, 0.75), inset -6px 0 48px rgba(138, 145, 158, 0.75);
+  height: 100%;
 }
 
-/* line 22, ../components/sass/_mainGlobals.scss */
+/* line 20, ../components/sass/_mainGlobals.scss */
 body {
   height: 100%;
-  min-height: 100%;
   padding: 0;
   margin: 0 auto;
   line-height: 1.6em;
   font-family: Arial, sans-serif;
 }
 @media only screen and (min-width: 960px) {
-  /* line 22, ../components/sass/_mainGlobals.scss */
+  /* line 20, ../components/sass/_mainGlobals.scss */
   body {
     width: 960px;
     margin: 0 auto;
   }
 }
-/* line 33, ../components/sass/_mainGlobals.scss */
+/* line 31, ../components/sass/_mainGlobals.scss */
 body .container {
   position: relative;
   min-height: 100%;
   width: 100%;
   margin: 0 auto;
+  background: linear-gradient(rgba(217, 235, 255, 0.75), rgba(138, 145, 158, 0.75));
+  box-shadow: inset 6px 12px 48px rgba(138, 145, 158, 0.75), inset -6px 0 48px rgba(138, 145, 158, 0.75);
 }
-/* line 39, ../components/sass/_mainGlobals.scss */
+/* line 40, ../components/sass/_mainGlobals.scss */
 body .container .main {
   padding-bottom: 96px;
   margin: 2%;
 }
-/* line 45, ../components/sass/_mainGlobals.scss */
+/* line 46, ../components/sass/_mainGlobals.scss */
 body .container footer {
   position: absolute;
   bottom: 0;
@@ -87,29 +86,29 @@ body .container footer {
   text-align: center;
   color: #737878;
 }
-/* line 56, ../components/sass/_mainGlobals.scss */
+/* line 57, ../components/sass/_mainGlobals.scss */
 body .container footer .social-icon {
   width: 24px;
   height: 24px;
   margin: 0 6px;
 }
 
-/* line 66, ../components/sass/_mainGlobals.scss */
+/* line 67, ../components/sass/_mainGlobals.scss */
 a {
   text-decoration: none;
 }
 
-/* line 70, ../components/sass/_mainGlobals.scss */
+/* line 71, ../components/sass/_mainGlobals.scss */
 img {
   max-width: 100%;
 }
 
-/* line 74, ../components/sass/_mainGlobals.scss */
+/* line 75, ../components/sass/_mainGlobals.scss */
 h3 {
   margin: 0 0 1em 0;
 }
 
-/* line 81, ../components/sass/_mainGlobals.scss */
+/* line 82, ../components/sass/_mainGlobals.scss */
 .calendar, .photo {
   background: url("../images/background/cream_dust_@2X.png");
 }
