@@ -628,37 +628,36 @@ header nav li a {
   vertical-align: bottom;
   display: block;
   width: 100%;
-  min-height: 100%;
   border-radius: .25em;
 }
-/* line 92, ../components/sass/_woodwork.scss */
+/* line 91, ../components/sass/_woodwork.scss */
 .lightBox .imgBox .previous, .lightBox .imgBox .next, .lightBox .imgBox .close {
   position: absolute;
   color: rgba(255, 255, 255, 0.4);
   background: rgba(127, 127, 127, 0.08);
   font-size: 2.2em;
 }
-/* line 97, ../components/sass/_woodwork.scss */
+/* line 96, ../components/sass/_woodwork.scss */
 .lightBox .imgBox .previous:hover, .lightBox .imgBox .next:hover, .lightBox .imgBox .close:hover {
   cursor: pointer;
   background: rgba(127, 127, 127, 0.6);
   color: rgba(255, 255, 255, 0.8);
 }
-/* line 103, ../components/sass/_woodwork.scss */
+/* line 102, ../components/sass/_woodwork.scss */
 .lightBox .imgBox .previous, .lightBox .imgBox .next {
   top: 0;
   height: 100%;
   padding: 35% 1.5% 0;
 }
-/* line 108, ../components/sass/_woodwork.scss */
+/* line 107, ../components/sass/_woodwork.scss */
 .lightBox .imgBox .previous {
   left: 0;
 }
-/* line 111, ../components/sass/_woodwork.scss */
+/* line 110, ../components/sass/_woodwork.scss */
 .lightBox .imgBox .next {
   right: 0;
 }
-/* line 114, ../components/sass/_woodwork.scss */
+/* line 113, ../components/sass/_woodwork.scss */
 .lightBox .imgBox .close {
   left: 0;
   bottom: 0;
@@ -666,17 +665,17 @@ header nav li a {
   padding: 1.5% 0;
 }
 
-/* line 137, ../components/sass/_woodwork.scss */
+/* line 136, ../components/sass/_woodwork.scss */
 .portrait {
   width: 60%;
   max-width: 500px;
 }
-/* line 141, ../components/sass/_woodwork.scss */
+/* line 140, ../components/sass/_woodwork.scss */
 .portrait .imgBox .previous, .portrait .imgBox .next {
   padding-top: 65%;
 }
 
-/* line 148, ../components/sass/_woodwork.scss */
+/* line 147, ../components/sass/_woodwork.scss */
 .overlay {
   z-index: 99;
   position: fixed;

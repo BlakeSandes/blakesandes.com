@@ -310,7 +310,6 @@ $element.on('click',function() {
   position($('.lightBox'));
 
   $overlay.appendTo('.container');
-
   
 });
 
@@ -337,8 +336,6 @@ $('.next').on('click', function() {
 
   position($('.lightBox'));
 
-  
-
 });
 
 // Previous button behaviour.
@@ -359,7 +356,6 @@ $('.previous').on('click', function() {
   $('.imgBox li').remove();
   $('<li><img src="'+prevImgSource+'" /></li>')
   .fadeIn(400).appendTo($('.imgBox'));
-
 
   position($('.lightBox'));
   
@@ -383,45 +379,64 @@ $('.container').on('click', '.overlay', function(){
 
 function position(elem){
   
-  var docHeight = $(window).height();
-  var docWidth = $(window).width();
-  var docYcenter = docHeight / 2;
-  var docXcenter = docWidth / 2;
-
+  
   function choosePosition(){
+    var pageWidth = window.innerWidth;
+    var pageHeight = window.innerHeight;
+    
+    if (typeof pageWidth != "number"){
+      if (document.compatMode === "CSS1Compat") {
+        pageWidth = document.documentElement.clientWidth;
+        pageHeight = document.documentElement.clientHeight;
+      } else {
+        pageWidth = document.body.clientWidth;
+        pageHeight = document.body.clientHeight;
+      }
+    }
 
-    if ($(elem).outerHeight() > $(elem).outerWidth()) {
+    var pageYcenter = pageHeight * 0.5;
+    var pageXcenter = pageWidth * 0.5;
+    
+    if ($(elem).innerHeight() > $(elem).innerWidth()) {
       var portrait = $(elem).addClass('portrait');
       
-      var portraitHeight = $(portrait).height();
-      var portraitWidth = $(portrait).width();
-      var portraitYcenter = portraitHeight / 2;
-      var portraitXcenter = portraitWidth / 2;
-      var portraitYposition = docYcenter - portraitYcenter;
-      var portraitXposition = docXcenter - portraitXcenter;
+      var portraitYcenter = $(portrait).height() * 0.5;
+      var portraitXcenter = $(portrait).width() * 0.5;
+      var portraitYposition = pageYcenter - portraitYcenter;
+      var portraitXposition = pageXcenter - portraitXcenter;
       
       $(portrait).css({"top": portraitYposition, "left": portraitXposition});
-    
-    } else if ($(elem).outerHeight() < $(elem).outerWidth())  {
+      
+      // console.log("Page Width: " +docWidth+ ", Page Height: " +docHeight);
+      // console.log("Page Width Center: " +pageXcenter+ ", Page Height Center: " + pageYcenter);
+      // console.log("Top of LightBox: " + portraitYposition + ", Left of LightBox: " + portraitXposition);
+      // console.log("Top to center in portrait: " +portraitYcenter+ ", Left to center in portrait: " +portraitXcenter);
+      // console.log("Light Box Height: " + $(portrait).height() + ", Light Box Width: " +$(portrait).width());
+
+    } else  {
+      
       var landscape = $(elem).removeClass('portrait');
       
-      var landscapeHeight = $(landscape).height();
-      var landscapeWidth = $(landscape).width();
-      var landscapeYcenter = landscapeHeight / 2;
-      var landscapeXcenter = landscapeWidth / 2;
-      var landscapeYposition = docYcenter - landscapeYcenter;
-      var landscapeXposition = docXcenter - landscapeXcenter;
+      var landscapeYcenter = $(landscape).height() * 0.5;
+      var landscapeXcenter = $(landscape).width() * 0.5;
+      var landscapeYposition = pageYcenter - landscapeYcenter;
+      var landscapeXposition = pageXcenter - landscapeXcenter;
       
       $(landscape).css({"top": landscapeYposition, "left": landscapeXposition});
+      
+      console.log("Page Width: " +pageWidth+ ", Page Height: " +pageHeight);
+      console.log("Page Width Center: " +pageXcenter+ ", Page Height Center: " + pageYcenter);
+      console.log("Top of LightBox: " + landscapeYposition + ", Left of LightBox: " + landscapeXposition);
+      console.log("Top to center in landscape: " +landscapeYcenter+ ", Left to center in landscape: " +landscapeXcenter); 
+      console.log("Light Box Height: " + $(landscape).height() + ", Light Box Width: " +$(landscape).width());
+      
     }
-    $(window).css({"background": "black"});
-    $(window).css({"background": "black"});
   }
   return choosePosition();
 }
 
 
-$(document).ready(function() {
+$(window).load(function() {
   position($('.lightBox'));
 });
 
