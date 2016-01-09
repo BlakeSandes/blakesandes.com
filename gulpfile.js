@@ -16,7 +16,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 var env,
-    coffeeSources,
     jsSources,
     sassSources,
     htmlSources,
@@ -70,7 +69,6 @@ gulp.task('compass', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(coffeeSources, ['coffee']);
   gulp.watch(jsSources, ['js']);
   gulp.watch('components/sass/*.scss', ['compass']);
   gulp.watch('builds/development/*.html', ['html']);
