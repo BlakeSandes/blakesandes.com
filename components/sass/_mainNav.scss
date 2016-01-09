@@ -2,15 +2,14 @@
 
 header {
   position: relative;
-  margin: .12em auto 0;
+  margin: .12em auto;
   width: 100%;
-  height: 120px;
+  height: 96px;
   background: $headBG;
   box-shadow: inset 0 0 3.5px $headColor,
               ;
   @media screen and (min-width: 620px) {
-    height: 98px;
-    padding-top: 12px;
+    height: 72px;
     border-bottom: 1px solid #6F9AFF;
     box-shadow: inset 0 0 2.5px  $headColor;
 
@@ -34,7 +33,7 @@ header {
     h1 {
       font-family: Georgia, Times;
       margin: 0;
-      padding: 12px 0 6px;
+      padding: 6px 0 0;
       font-size: 1.25em;
       font-weight: normal;
       line-height: 0.8em;
@@ -45,7 +44,7 @@ header {
     h2 {
       font-size: 0.75em;
       margin: 0;
-      padding-bottom: 12px;
+      // padding-bottom: 12px;
       font-weight: normal;
       @media screen and (min-width: 620px) {
         font-size: 0.865em;
@@ -123,6 +122,11 @@ header {
   background: darken($navBG, 14%);
 }
 
+// Added class to header when scrolling down page.
+
+.headerHide {
+  display: none;  
+}
 
 
 

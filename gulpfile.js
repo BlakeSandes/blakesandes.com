@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
-    coffee = require('gulp-coffee'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -33,7 +32,6 @@ if (env==='development') {
   outputDir = 'builds/production/';
 }
 
- coffeeSources = ['components/coffee/*.coffee'];
  jsSources = ['components/scripts/*.js'];
  sassSources = [
     'components/sass/main.scss',
@@ -45,13 +43,6 @@ if (env==='development') {
  htmlSources = [outputDir + '*.html'];
  jsonSources = [outputDir + 'js/*.json'];
 
-
-gulp.task('coffee', function() {
-  gulp.src(coffeeSources)
-    .pipe(coffee({ bare: true })
-      .on('error', gutil.log))
-    .pipe(gulp.dest('components/scripts'))
-});
 
 gulp.task('js', function() {
   gulp.src(jsSources)
@@ -119,6 +110,6 @@ gulp.task('json', function() {
   .pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'json', 'coffee','js', 'compass', 'images', 'connect', 'watch']);
+gulp.task('default', ['html', 'json','js', 'compass', 'images', 'connect', 'watch']);
 
 

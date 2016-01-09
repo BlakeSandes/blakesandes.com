@@ -119,6 +119,14 @@ $(".portfolio div ul").hover(function() {
 
 
 
+$ = require('jquery');
+
+var $header = $('header');
+
+
+if ($('body').scrollTop >= 120) {
+  $header.hide();
+}
 var $;
 
 $ = require('jquery');
@@ -406,17 +414,11 @@ function position(elem){
       var portraitXposition = pageXcenter - portraitXcenter;
       
       $(portrait).css({"top": portraitYposition, "left": portraitXposition});
-      
-      // console.log("Page Width: " +docWidth+ ", Page Height: " +docHeight);
-      // console.log("Page Width Center: " +pageXcenter+ ", Page Height Center: " + pageYcenter);
-      // console.log("Top of LightBox: " + portraitYposition + ", Left of LightBox: " + portraitXposition);
-      // console.log("Top to center in portrait: " +portraitYcenter+ ", Left to center in portrait: " +portraitXcenter);
-      // console.log("Light Box Height: " + $(portrait).height() + ", Light Box Width: " +$(portrait).width());
 
     } else  {
       
       var landscape = $(elem).removeClass('portrait');
-      
+
       var landscapeYcenter = $(landscape).height() * 0.5;
       var landscapeXcenter = $(landscape).width() * 0.5;
       var landscapeYposition = pageYcenter - landscapeYcenter;
@@ -424,11 +426,7 @@ function position(elem){
       
       $(landscape).css({"top": landscapeYposition, "left": landscapeXposition});
       
-      console.log("Page Width: " +pageWidth+ ", Page Height: " +pageHeight);
-      console.log("Page Width Center: " +pageXcenter+ ", Page Height Center: " + pageYcenter);
-      console.log("Top of LightBox: " + landscapeYposition + ", Left of LightBox: " + landscapeXposition);
-      console.log("Top to center in landscape: " +landscapeYcenter+ ", Left to center in landscape: " +landscapeXcenter); 
-      console.log("Light Box Height: " + $(landscape).height() + ", Light Box Width: " +$(landscape).width());
+      
       
     }
   }

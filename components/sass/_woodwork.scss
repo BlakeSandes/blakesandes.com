@@ -88,14 +88,14 @@
       }
       
     }
-    .previous,.next,.close {
+    .previous,.next {
       position: absolute;
-      color: rgba(255,255,255, .4);
-      background: rgba(127,127,127, .08);
+      color: rgba(255,255,255, .6);
+      // background: rgba(127,127,127, .08);
       font-size: 2.2em;
       &:hover {
         cursor: pointer;
-        background: rgba(127,127,127, .6);
+        // background: rgba(127,127,127, .6);
         color: rgba(255,255,255, .8);
       }
     }
@@ -110,12 +110,6 @@
      .next {
       right: 0;
     } 
-    .close {
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 1.5% 0;
-    }
 
     
   }

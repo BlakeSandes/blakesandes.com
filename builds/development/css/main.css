@@ -120,9 +120,9 @@ h3 {
 /* line 3, ../components/sass/_mainNav.scss */
 header {
   position: relative;
-  margin: .12em auto 0;
+  margin: .12em auto;
   width: 100%;
-  height: 120px;
+  height: 96px;
   background: -webkit-gradient(linear, left top, left bottom, from(#72aad6), to(#82b9ff));
   background: -webkit-linear-gradient(top, #72aad6, #82b9ff);
   background: linear-gradient(to bottom, #72aad6, #82b9ff);
@@ -135,14 +135,13 @@ header {
 @media screen and (min-width: 620px) {
   /* line 3, ../components/sass/_mainNav.scss */
   header {
-    height: 98px;
-    padding-top: 12px;
+    height: 72px;
     border-bottom: 1px solid #6F9AFF;
     -webkit-box-shadow: inset 0 0 2.5px #ddebf3;
             box-shadow: inset 0 0 2.5px #ddebf3;
   }
 }
-/* line 18, ../components/sass/_mainNav.scss */
+/* line 17, ../components/sass/_mainNav.scss */
 header .logo {
   height: 100%;
   text-align: center;
@@ -151,12 +150,12 @@ header .logo {
   -webkit-transition: color 1s;
           transition: color 1s;
 }
-/* line 24, ../components/sass/_mainNav.scss */
+/* line 23, ../components/sass/_mainNav.scss */
 header .logo:hover {
   color: rgba(255, 251, 84, 0.75);
 }
 @media screen and (min-width: 620px) {
-  /* line 18, ../components/sass/_mainNav.scss */
+  /* line 17, ../components/sass/_mainNav.scss */
   header .logo {
     float: left;
     margin-left: 5%;
@@ -164,37 +163,36 @@ header .logo:hover {
     width: 30%;
   }
 }
-/* line 34, ../components/sass/_mainNav.scss */
+/* line 33, ../components/sass/_mainNav.scss */
 header .logo h1 {
   font-family: Georgia, Times;
   margin: 0;
-  padding: 12px 0 6px;
+  padding: 6px 0 0;
   font-size: 1.25em;
   font-weight: normal;
   line-height: 0.8em;
 }
 @media screen and (min-width: 620px) {
-  /* line 34, ../components/sass/_mainNav.scss */
+  /* line 33, ../components/sass/_mainNav.scss */
   header .logo h1 {
     font-size: 1.85em;
   }
 }
-/* line 45, ../components/sass/_mainNav.scss */
+/* line 44, ../components/sass/_mainNav.scss */
 header .logo h2 {
   font-size: 0.75em;
   margin: 0;
-  padding-bottom: 12px;
   font-weight: normal;
 }
 @media screen and (min-width: 620px) {
-  /* line 45, ../components/sass/_mainNav.scss */
+  /* line 44, ../components/sass/_mainNav.scss */
   header .logo h2 {
     font-size: 0.865em;
     margin-bottom: 20px;
     padding-bottom: 0;
   }
 }
-/* line 62, ../components/sass/_mainNav.scss */
+/* line 61, ../components/sass/_mainNav.scss */
 header nav {
   display: block;
   text-align: center;
@@ -207,7 +205,7 @@ header nav {
   background: linear-gradient(to bottom, #72aad6, #82b9ff);
 }
 @media screen and (min-width: 620px) {
-  /* line 62, ../components/sass/_mainNav.scss */
+  /* line 61, ../components/sass/_mainNav.scss */
   header nav {
     background: none;
     float: right;
@@ -220,30 +218,30 @@ header nav {
             box-shadow: none;
   }
 }
-/* line 81, ../components/sass/_mainNav.scss */
+/* line 80, ../components/sass/_mainNav.scss */
 header nav ul {
   list-style: none;
   margin: 0 10px;
   padding: 0;
 }
-/* line 86, ../components/sass/_mainNav.scss */
+/* line 85, ../components/sass/_mainNav.scss */
 header nav li {
   display: inline-block;
   height: inherit;
   margin: 0;
   min-width: 64px;
 }
-/* line 92, ../components/sass/_mainNav.scss */
+/* line 91, ../components/sass/_mainNav.scss */
 header nav li:nth-child(2) {
   height: 36px;
 }
-/* line 94, ../components/sass/_mainNav.scss */
+/* line 93, ../components/sass/_mainNav.scss */
 header nav li:nth-child(2) a {
   height: inherit;
   width: 84px;
   padding-top: 6px;
 }
-/* line 104, ../components/sass/_mainNav.scss */
+/* line 103, ../components/sass/_mainNav.scss */
 header nav li a {
   display: block;
   height: inherit;
@@ -253,11 +251,16 @@ header nav li a {
           transition: background .5s, color .25s;
 }
 
-/* line 120, ../components/sass/_mainNav.scss */
+/* line 119, ../components/sass/_mainNav.scss */
 .selected {
   color: white;
   text-shadow: 0 0 1px #787ea5;
   background: #00e1da;
+}
+
+/* line 127, ../components/sass/_mainNav.scss */
+.headerHide {
+  display: none;
 }
 
 /* line 2, ../components/sass/_mainAbout.scss */
@@ -656,16 +659,14 @@ header nav li a {
   border-radius: .25em;
 }
 /* line 91, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .previous, .lightBox .imgBox .next, .lightBox .imgBox .close {
+.lightBox .imgBox .previous, .lightBox .imgBox .next {
   position: absolute;
-  color: rgba(255, 255, 255, 0.4);
-  background: rgba(127, 127, 127, 0.08);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 2.2em;
 }
 /* line 96, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .previous:hover, .lightBox .imgBox .next:hover, .lightBox .imgBox .close:hover {
+.lightBox .imgBox .previous:hover, .lightBox .imgBox .next:hover {
   cursor: pointer;
-  background: rgba(127, 127, 127, 0.6);
   color: rgba(255, 255, 255, 0.8);
 }
 /* line 102, ../components/sass/_woodwork.scss */
@@ -682,25 +683,18 @@ header nav li a {
 .lightBox .imgBox .next {
   right: 0;
 }
-/* line 113, ../components/sass/_woodwork.scss */
-.lightBox .imgBox .close {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 1.5% 0;
-}
 
-/* line 136, ../components/sass/_woodwork.scss */
+/* line 130, ../components/sass/_woodwork.scss */
 .portrait {
   width: 60%;
   max-width: 500px;
 }
-/* line 140, ../components/sass/_woodwork.scss */
+/* line 134, ../components/sass/_woodwork.scss */
 .portrait .imgBox .previous, .portrait .imgBox .next {
   padding-top: 65%;
 }
 
-/* line 147, ../components/sass/_woodwork.scss */
+/* line 141, ../components/sass/_woodwork.scss */
 .overlay {
   z-index: 99;
   position: fixed;
